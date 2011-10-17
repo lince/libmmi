@@ -1,0 +1,173 @@
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1upnp_1_1MMIService}{
+\section{br::ufscar::lince::mmi::upnp::MMIService Class Reference}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1upnp_1_1MMIService}\index{br::ufscar::lince::mmi::upnp::MMIService@{br::ufscar::lince::mmi::upnp::MMIService}}
+}
+
+
+Esta classe representa um dispositivo e seu serviços.  
+
+
+
+
+{\ttfamily \#include $<$MMIService.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1upnp_1_1MMIService_a34c70b44f4b7491dc2e9a398423ef974}{start} ()
+\begin{DoxyCompactList}\small\item\em Inicia os serviços. \item\end{DoxyCompactList}\item 
+bool \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1upnp_1_1MMIService_a0687c9dbf5bbbaa2b490e19bb88a1a51}{stop} ()
+\begin{DoxyCompactList}\small\item\em Pára os serviços. \item\end{DoxyCompactList}\item 
+void \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1upnp_1_1MMIService_a0163a8a90ce5a43daad480795d323f5c}{initializeUPnPStateVariables} ()
+\begin{DoxyCompactList}\small\item\em Inicializa as variáveis de estado necessárias ao funcionamento do serviço. \item\end{DoxyCompactList}\item 
+UPnPService $\ast$ \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1upnp_1_1MMIService_aadd21fd9892177f42ca1e002b5dc6432}{getService} ()
+\begin{DoxyCompactList}\small\item\em Retorna a instância do serviço UPnP. \item\end{DoxyCompactList}\item 
+bool \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1upnp_1_1MMIService_a7fb929d5234cabe8bccffcbace4a97dc}{actionRequest} (UPnPAction $\ast$action)
+\begin{DoxyCompactList}\small\item\em Recebe solicitações de ações a serem executadas. \item\end{DoxyCompactList}\item 
+bool \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1upnp_1_1MMIService_a1e6559d7dbe7372d8f60e451ac157935}{variableRequest} (UPnPStateVariable $\ast$stateVar)
+\begin{DoxyCompactList}\small\item\em Envia o estado atual de uma variável do serviço. \item\end{DoxyCompactList}\item 
+bool \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1upnp_1_1MMIService_abd5a9ef1a311388d61cfe7c1a8380f56}{actionPostEvent} (UPnPAction $\ast$action)
+\begin{DoxyCompactList}\small\item\em Recebe uma mensagem (texto) de um dispositivo remoto. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1upnp_1_1MMIService}{MMIService} $\ast$ \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1upnp_1_1MMIService_a369cf8700f091154c446028e26c65cce}{getInstance} ()
+\begin{DoxyCompactList}\small\item\em Acessa a instância única. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1upnp_1_1MMIService_a02cbbb28a8831c5c5d535fc76111eb96}{MMIService} ()
+\begin{DoxyCompactList}\small\item\em Construtor. \item\end{DoxyCompactList}\item 
+\hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1upnp_1_1MMIService_a549825fd03af5db240df7435e66fe9fb}{$\sim$MMIService} ()
+\begin{DoxyCompactList}\small\item\em Destrutor. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Esta classe representa um dispositivo e seu serviços. Cada dispositivo possui sua descrição e os serviços que disponibiliza. Recebe as chamadas de métodos (ações), faz o tratamento e devolve o resultado para o dispositivo que o invocou. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1upnp_1_1MMIService_a02cbbb28a8831c5c5d535fc76111eb96}{
+\index{br::ufscar::lince::mmi::upnp::MMIService@{br::ufscar::lince::mmi::upnp::MMIService}!MMIService@{MMIService}}
+\index{MMIService@{MMIService}!br::ufscar::lince::mmi::upnp::MMIService@{br::ufscar::lince::mmi::upnp::MMIService}}
+\subsubsection[{MMIService}]{\setlength{\rightskip}{0pt plus 5cm}br::ufscar::lince::mmi::upnp::MMIService::MMIService ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1upnp_1_1MMIService_a02cbbb28a8831c5c5d535fc76111eb96}
+
+
+Construtor. 
+
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1upnp_1_1MMIService_a549825fd03af5db240df7435e66fe9fb}{
+\index{br::ufscar::lince::mmi::upnp::MMIService@{br::ufscar::lince::mmi::upnp::MMIService}!$\sim$MMIService@{$\sim$MMIService}}
+\index{$\sim$MMIService@{$\sim$MMIService}!br::ufscar::lince::mmi::upnp::MMIService@{br::ufscar::lince::mmi::upnp::MMIService}}
+\subsubsection[{$\sim$MMIService}]{\setlength{\rightskip}{0pt plus 5cm}br::ufscar::lince::mmi::upnp::MMIService::$\sim$MMIService ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1upnp_1_1MMIService_a549825fd03af5db240df7435e66fe9fb}
+
+
+Destrutor. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1upnp_1_1MMIService_abd5a9ef1a311388d61cfe7c1a8380f56}{
+\index{br::ufscar::lince::mmi::upnp::MMIService@{br::ufscar::lince::mmi::upnp::MMIService}!actionPostEvent@{actionPostEvent}}
+\index{actionPostEvent@{actionPostEvent}!br::ufscar::lince::mmi::upnp::MMIService@{br::ufscar::lince::mmi::upnp::MMIService}}
+\subsubsection[{actionPostEvent}]{\setlength{\rightskip}{0pt plus 5cm}bool br::ufscar::lince::mmi::upnp::MMIService::actionPostEvent (UPnPAction $\ast$ {\em action})}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1upnp_1_1MMIService_abd5a9ef1a311388d61cfe7c1a8380f56}
+
+
+Recebe uma mensagem (texto) de um dispositivo remoto. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em action}]ação a ser executada. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, caso a ação seja executada com sucesso, ou false, caso contrário. 
+\end{DoxyReturn}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1upnp_1_1MMIService_a7fb929d5234cabe8bccffcbace4a97dc}{
+\index{br::ufscar::lince::mmi::upnp::MMIService@{br::ufscar::lince::mmi::upnp::MMIService}!actionRequest@{actionRequest}}
+\index{actionRequest@{actionRequest}!br::ufscar::lince::mmi::upnp::MMIService@{br::ufscar::lince::mmi::upnp::MMIService}}
+\subsubsection[{actionRequest}]{\setlength{\rightskip}{0pt plus 5cm}bool br::ufscar::lince::mmi::upnp::MMIService::actionRequest (UPnPAction $\ast$ {\em action})}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1upnp_1_1MMIService_a7fb929d5234cabe8bccffcbace4a97dc}
+
+
+Recebe solicitações de ações a serem executadas. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em action}]ação a ser executada. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, caso a ação seja executada com sucesso, ou false, caso contrário. 
+\end{DoxyReturn}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1upnp_1_1MMIService_a369cf8700f091154c446028e26c65cce}{
+\index{br::ufscar::lince::mmi::upnp::MMIService@{br::ufscar::lince::mmi::upnp::MMIService}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!br::ufscar::lince::mmi::upnp::MMIService@{br::ufscar::lince::mmi::upnp::MMIService}}
+\subsubsection[{getInstance}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf MMIService}$\ast$ br::ufscar::lince::mmi::upnp::MMIService::getInstance ()\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1upnp_1_1MMIService_a369cf8700f091154c446028e26c65cce}
+
+
+Acessa a instância única. 
+
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1upnp_1_1MMIService_aadd21fd9892177f42ca1e002b5dc6432}{
+\index{br::ufscar::lince::mmi::upnp::MMIService@{br::ufscar::lince::mmi::upnp::MMIService}!getService@{getService}}
+\index{getService@{getService}!br::ufscar::lince::mmi::upnp::MMIService@{br::ufscar::lince::mmi::upnp::MMIService}}
+\subsubsection[{getService}]{\setlength{\rightskip}{0pt plus 5cm}UPnPService$\ast$ br::ufscar::lince::mmi::upnp::MMIService::getService ()}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1upnp_1_1MMIService_aadd21fd9892177f42ca1e002b5dc6432}
+
+
+Retorna a instância do serviço UPnP. 
+
+\begin{DoxyReturn}{Returns}
+serviço \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1upnp_1_1MMIService}{MMIService}. 
+\end{DoxyReturn}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1upnp_1_1MMIService_a0163a8a90ce5a43daad480795d323f5c}{
+\index{br::ufscar::lince::mmi::upnp::MMIService@{br::ufscar::lince::mmi::upnp::MMIService}!initializeUPnPStateVariables@{initializeUPnPStateVariables}}
+\index{initializeUPnPStateVariables@{initializeUPnPStateVariables}!br::ufscar::lince::mmi::upnp::MMIService@{br::ufscar::lince::mmi::upnp::MMIService}}
+\subsubsection[{initializeUPnPStateVariables}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::mmi::upnp::MMIService::initializeUPnPStateVariables ()}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1upnp_1_1MMIService_a0163a8a90ce5a43daad480795d323f5c}
+
+
+Inicializa as variáveis de estado necessárias ao funcionamento do serviço. 
+
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1upnp_1_1MMIService_a34c70b44f4b7491dc2e9a398423ef974}{
+\index{br::ufscar::lince::mmi::upnp::MMIService@{br::ufscar::lince::mmi::upnp::MMIService}!start@{start}}
+\index{start@{start}!br::ufscar::lince::mmi::upnp::MMIService@{br::ufscar::lince::mmi::upnp::MMIService}}
+\subsubsection[{start}]{\setlength{\rightskip}{0pt plus 5cm}bool br::ufscar::lince::mmi::upnp::MMIService::start ()}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1upnp_1_1MMIService_a34c70b44f4b7491dc2e9a398423ef974}
+
+
+Inicia os serviços. 
+
+\begin{DoxyReturn}{Returns}
+true, caso obtena sucesso na operação, ou false, caso contrário. 
+\end{DoxyReturn}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1upnp_1_1MMIService_a0687c9dbf5bbbaa2b490e19bb88a1a51}{
+\index{br::ufscar::lince::mmi::upnp::MMIService@{br::ufscar::lince::mmi::upnp::MMIService}!stop@{stop}}
+\index{stop@{stop}!br::ufscar::lince::mmi::upnp::MMIService@{br::ufscar::lince::mmi::upnp::MMIService}}
+\subsubsection[{stop}]{\setlength{\rightskip}{0pt plus 5cm}bool br::ufscar::lince::mmi::upnp::MMIService::stop ()}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1upnp_1_1MMIService_a0687c9dbf5bbbaa2b490e19bb88a1a51}
+
+
+Pára os serviços. 
+
+\begin{DoxyReturn}{Returns}
+true, caso obtena sucesso na operação, ou false, caso contrário. 
+\end{DoxyReturn}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1upnp_1_1MMIService_a1e6559d7dbe7372d8f60e451ac157935}{
+\index{br::ufscar::lince::mmi::upnp::MMIService@{br::ufscar::lince::mmi::upnp::MMIService}!variableRequest@{variableRequest}}
+\index{variableRequest@{variableRequest}!br::ufscar::lince::mmi::upnp::MMIService@{br::ufscar::lince::mmi::upnp::MMIService}}
+\subsubsection[{variableRequest}]{\setlength{\rightskip}{0pt plus 5cm}bool br::ufscar::lince::mmi::upnp::MMIService::variableRequest (UPnPStateVariable $\ast$ {\em stateVar})}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1upnp_1_1MMIService_a1e6559d7dbe7372d8f60e451ac157935}
+
+
+Envia o estado atual de uma variável do serviço. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em stateVar}]variável solicitada. \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, caso a ação seja executada com sucesso, ou false, caso contrário. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{MMIService_8h}{MMIService.h}\end{DoxyCompactItemize}

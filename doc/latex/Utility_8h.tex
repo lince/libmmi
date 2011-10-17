@@ -1,0 +1,69 @@
+\hypertarget{Utility_8h}{
+\section{include/ink/Utility.h File Reference}
+\label{Utility_8h}\index{include/ink/Utility.h@{include/ink/Utility.h}}
+}
+{\ttfamily \#include $<$string.h$>$}\par
+{\ttfamily \#include $<$math.h$>$}\par
+{\ttfamily \#include $<$stdio.h$>$}\par
+{\ttfamily \#include $<$ctype.h$>$}\par
+{\ttfamily \#include $<$vector$>$}\par
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1structBoundingBox}{br::ufscar::lince::mmi::ink::structBoundingBox}
+\begin{DoxyCompactList}\small\item\em Desc -\/ structure to define the BoundingBox of the trace data and hence helps in normalizing trace co-\/ordinate data to fit in the rendering area co-\/ordinate. \item\end{DoxyCompactList}\item 
+class \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1GlobalFunction}{br::ufscar::lince::mmi::ink::GlobalFunction}
+\begin{DoxyCompactList}\small\item\em Classe que possui métodos úteis para a realização do parser de um InkML. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespacebr}{br}
+\item 
+namespace \hyperlink{namespacebr_1_1ufscar}{br::ufscar}
+\item 
+namespace \hyperlink{namespacebr_1_1ufscar_1_1lince}{br::ufscar::lince}
+\item 
+namespace \hyperlink{namespacebr_1_1ufscar_1_1lince_1_1mmi}{br::ufscar::lince::mmi}
+\item 
+namespace \hyperlink{namespacebr_1_1ufscar_1_1lince_1_1mmi_1_1ink}{br::ufscar::lince::mmi::ink}
+\end{DoxyCompactItemize}
+\subsection*{Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{Utility_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS}~true
+\item 
+\#define \hyperlink{Utility_8h_a628864fecdbb81cd22f84a7b4ba42fe4}{E\_\-NOINKROOT}~1
+\item 
+\#define \hyperlink{Utility_8h_ae9a3d4e3c3fc838e71a2f0cb96d145e0}{E\_\-XMLPARSE}~2
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1structBoundingBox}{br::ufscar::lince::mmi::ink::structBoundingBox} \hyperlink{namespacebr_1_1ufscar_1_1lince_1_1mmi_1_1ink_aa98c72748d18ed23e3c98904db888f3d}{br::ufscar::lince::mmi::ink::BoundingBox}
+\begin{DoxyCompactList}\small\item\em Desc -\/ structure to define the BoundingBox of the trace data and hence helps in normalizing trace co-\/ordinate data to fit in the rendering area co-\/ordinate. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespacebr_1_1ufscar_1_1lince_1_1mmi_1_1ink_a682c285834346cbf7587dd58c9832fe4}{br::ufscar::lince::mmi::ink::InkMLError} \{ \hyperlink{namespacebr_1_1ufscar_1_1lince_1_1mmi_1_1ink_a682c285834346cbf7587dd58c9832fe4a32bff24228b0ec7a47a91f5736726da0}{br::ufscar::lince::mmi::ink::NoError}, 
+\hyperlink{namespacebr_1_1ufscar_1_1lince_1_1mmi_1_1ink_a682c285834346cbf7587dd58c9832fe4a8bd19fd9798a5d3bb3598c25a82abc7a}{br::ufscar::lince::mmi::ink::NoInkRoot}, 
+\hyperlink{namespacebr_1_1ufscar_1_1lince_1_1mmi_1_1ink_a682c285834346cbf7587dd58c9832fe4a8c3f0ab9c632f8200fad028d18c75953}{br::ufscar::lince::mmi::ink::MalFormedXml}
+ \}
+\begin{DoxyCompactList}\small\item\em Desc -\/ Error constants. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Define Documentation}
+\hypertarget{Utility_8h_a628864fecdbb81cd22f84a7b4ba42fe4}{
+\index{Utility.h@{Utility.h}!E\_\-NOINKROOT@{E\_\-NOINKROOT}}
+\index{E\_\-NOINKROOT@{E\_\-NOINKROOT}!Utility.h@{Utility.h}}
+\subsubsection[{E\_\-NOINKROOT}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\_\-NOINKROOT~1}}
+\label{Utility_8h_a628864fecdbb81cd22f84a7b4ba42fe4}
+\hypertarget{Utility_8h_ae9a3d4e3c3fc838e71a2f0cb96d145e0}{
+\index{Utility.h@{Utility.h}!E\_\-XMLPARSE@{E\_\-XMLPARSE}}
+\index{E\_\-XMLPARSE@{E\_\-XMLPARSE}!Utility.h@{Utility.h}}
+\subsubsection[{E\_\-XMLPARSE}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\_\-XMLPARSE~2}}
+\label{Utility_8h_ae9a3d4e3c3fc838e71a2f0cb96d145e0}
+\hypertarget{Utility_8h_aa90cac659d18e8ef6294c7ae337f6b58}{
+\index{Utility.h@{Utility.h}!SUCCESS@{SUCCESS}}
+\index{SUCCESS@{SUCCESS}!Utility.h@{Utility.h}}
+\subsubsection[{SUCCESS}]{\setlength{\rightskip}{0pt plus 5cm}\#define SUCCESS~true}}
+\label{Utility_8h_aa90cac659d18e8ef6294c7ae337f6b58}

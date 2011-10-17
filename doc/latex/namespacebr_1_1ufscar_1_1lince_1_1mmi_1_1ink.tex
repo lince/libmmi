@@ -1,0 +1,116 @@
+\hypertarget{namespacebr_1_1ufscar_1_1lince_1_1mmi_1_1ink}{
+\section{br::ufscar::lince::mmi::ink Namespace Reference}
+\label{namespacebr_1_1ufscar_1_1lince_1_1mmi_1_1ink}\index{br::ufscar::lince::mmi::ink@{br::ufscar::lince::mmi::ink}}
+}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Ink}{Ink}
+\begin{DoxyCompactList}\small\item\em Classe que representa dados de tinta contidos em um MultimodalInputEvent. \item\end{DoxyCompactList}\item 
+class \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1InkMLParser}{InkMLParser}
+\begin{DoxyCompactList}\small\item\em Classe responsável por realizar o parser de um InkML, utilizando a biblioteca xerces. \item\end{DoxyCompactList}\item 
+class \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1InkSource}{InkSource}
+\begin{DoxyCompactList}\small\item\em Clase que representa a \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1InkSource}{InkSource} de um InkML. \item\end{DoxyCompactList}\item 
+class \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Trace}{Trace}
+\begin{DoxyCompactList}\small\item\em Classe que representa um trace de um InkML. \item\end{DoxyCompactList}\item 
+class \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1TraceFormat}{TraceFormat}
+\begin{DoxyCompactList}\small\item\em Classe que representa o formato de um trace de um InkML. \item\end{DoxyCompactList}\item 
+struct \hyperlink{structbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1structBoundingBox}{structBoundingBox}
+\begin{DoxyCompactList}\small\item\em Desc -\/ structure to define the BoundingBox of the trace data and hence helps in normalizing trace co-\/ordinate data to fit in the rendering area co-\/ordinate. \item\end{DoxyCompactList}\item 
+class \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1GlobalFunction}{GlobalFunction}
+\begin{DoxyCompactList}\small\item\em Classe que possui métodos úteis para a realização do parser de um InkML. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1structBoundingBox}{br::ufscar::lince::mmi::ink::structBoundingBox} \hyperlink{namespacebr_1_1ufscar_1_1lince_1_1mmi_1_1ink_aa98c72748d18ed23e3c98904db888f3d}{BoundingBox}
+\begin{DoxyCompactList}\small\item\em Desc -\/ structure to define the BoundingBox of the trace data and hence helps in normalizing trace co-\/ordinate data to fit in the rendering area co-\/ordinate. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespacebr_1_1ufscar_1_1lince_1_1mmi_1_1ink_a857f7b80c5d28f256c70d78cacf91dab}{CHANNEL} \{ \par
+\hyperlink{namespacebr_1_1ufscar_1_1lince_1_1mmi_1_1ink_a857f7b80c5d28f256c70d78cacf91daba5b4adb4f2604c7cf6ac2dcb04b62a7f6}{X}, 
+\hyperlink{namespacebr_1_1ufscar_1_1lince_1_1mmi_1_1ink_a857f7b80c5d28f256c70d78cacf91daba5af4e4586325aca2cc29309c4358f8f3}{Y}, 
+\hyperlink{namespacebr_1_1ufscar_1_1lince_1_1mmi_1_1ink_a857f7b80c5d28f256c70d78cacf91dabace9b3468aa2f2d6d34f3a13c9c17faf7}{F}, 
+\hyperlink{namespacebr_1_1ufscar_1_1lince_1_1mmi_1_1ink_a857f7b80c5d28f256c70d78cacf91daba169d0e0b5c89cf62bcd060135ea38ff6}{S}, 
+\par
+\hyperlink{namespacebr_1_1ufscar_1_1lince_1_1mmi_1_1ink_a857f7b80c5d28f256c70d78cacf91dababf4cfb47dbf9cc85c60abb4083518d2f}{UNKNOWN}
+ \}
+\item 
+enum \hyperlink{namespacebr_1_1ufscar_1_1lince_1_1mmi_1_1ink_a682c285834346cbf7587dd58c9832fe4}{InkMLError} \{ \hyperlink{namespacebr_1_1ufscar_1_1lince_1_1mmi_1_1ink_a682c285834346cbf7587dd58c9832fe4a32bff24228b0ec7a47a91f5736726da0}{NoError}, 
+\hyperlink{namespacebr_1_1ufscar_1_1lince_1_1mmi_1_1ink_a682c285834346cbf7587dd58c9832fe4a8bd19fd9798a5d3bb3598c25a82abc7a}{NoInkRoot}, 
+\hyperlink{namespacebr_1_1ufscar_1_1lince_1_1mmi_1_1ink_a682c285834346cbf7587dd58c9832fe4a8c3f0ab9c632f8200fad028d18c75953}{MalFormedXml}
+ \}
+\begin{DoxyCompactList}\small\item\em Desc -\/ Error constants. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{namespacebr_1_1ufscar_1_1lince_1_1mmi_1_1ink_aa98c72748d18ed23e3c98904db888f3d}{
+\index{br::ufscar::lince::mmi::ink@{br::ufscar::lince::mmi::ink}!BoundingBox@{BoundingBox}}
+\index{BoundingBox@{BoundingBox}!br::ufscar::lince::mmi::ink@{br::ufscar::lince::mmi::ink}}
+\subsubsection[{BoundingBox}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf br::ufscar::lince::mmi::ink::structBoundingBox} {\bf br::ufscar::lince::mmi::ink::BoundingBox}}}
+\label{namespacebr_1_1ufscar_1_1lince_1_1mmi_1_1ink_aa98c72748d18ed23e3c98904db888f3d}
+
+
+Desc -\/ structure to define the BoundingBox of the trace data and hence helps in normalizing trace co-\/ordinate data to fit in the rendering area co-\/ordinate. 
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{namespacebr_1_1ufscar_1_1lince_1_1mmi_1_1ink_a857f7b80c5d28f256c70d78cacf91dab}{
+\index{br::ufscar::lince::mmi::ink@{br::ufscar::lince::mmi::ink}!CHANNEL@{CHANNEL}}
+\index{CHANNEL@{CHANNEL}!br::ufscar::lince::mmi::ink@{br::ufscar::lince::mmi::ink}}
+\subsubsection[{CHANNEL}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf br::ufscar::lince::mmi::ink::CHANNEL}}}
+\label{namespacebr_1_1ufscar_1_1lince_1_1mmi_1_1ink_a857f7b80c5d28f256c70d78cacf91dab}
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{X@{X}!br::ufscar::lince::mmi::ink@{br::ufscar::lince::mmi::ink}}\index{br::ufscar::lince::mmi::ink@{br::ufscar::lince::mmi::ink}!X@{X}}\item[{\em 
+\hypertarget{namespacebr_1_1ufscar_1_1lince_1_1mmi_1_1ink_a857f7b80c5d28f256c70d78cacf91daba5b4adb4f2604c7cf6ac2dcb04b62a7f6}{
+X}
+\label{namespacebr_1_1ufscar_1_1lince_1_1mmi_1_1ink_a857f7b80c5d28f256c70d78cacf91daba5b4adb4f2604c7cf6ac2dcb04b62a7f6}
+}]\index{Y@{Y}!br::ufscar::lince::mmi::ink@{br::ufscar::lince::mmi::ink}}\index{br::ufscar::lince::mmi::ink@{br::ufscar::lince::mmi::ink}!Y@{Y}}\item[{\em 
+\hypertarget{namespacebr_1_1ufscar_1_1lince_1_1mmi_1_1ink_a857f7b80c5d28f256c70d78cacf91daba5af4e4586325aca2cc29309c4358f8f3}{
+Y}
+\label{namespacebr_1_1ufscar_1_1lince_1_1mmi_1_1ink_a857f7b80c5d28f256c70d78cacf91daba5af4e4586325aca2cc29309c4358f8f3}
+}]\index{F@{F}!br::ufscar::lince::mmi::ink@{br::ufscar::lince::mmi::ink}}\index{br::ufscar::lince::mmi::ink@{br::ufscar::lince::mmi::ink}!F@{F}}\item[{\em 
+\hypertarget{namespacebr_1_1ufscar_1_1lince_1_1mmi_1_1ink_a857f7b80c5d28f256c70d78cacf91dabace9b3468aa2f2d6d34f3a13c9c17faf7}{
+F}
+\label{namespacebr_1_1ufscar_1_1lince_1_1mmi_1_1ink_a857f7b80c5d28f256c70d78cacf91dabace9b3468aa2f2d6d34f3a13c9c17faf7}
+}]\index{S@{S}!br::ufscar::lince::mmi::ink@{br::ufscar::lince::mmi::ink}}\index{br::ufscar::lince::mmi::ink@{br::ufscar::lince::mmi::ink}!S@{S}}\item[{\em 
+\hypertarget{namespacebr_1_1ufscar_1_1lince_1_1mmi_1_1ink_a857f7b80c5d28f256c70d78cacf91daba169d0e0b5c89cf62bcd060135ea38ff6}{
+S}
+\label{namespacebr_1_1ufscar_1_1lince_1_1mmi_1_1ink_a857f7b80c5d28f256c70d78cacf91daba169d0e0b5c89cf62bcd060135ea38ff6}
+}]\index{UNKNOWN@{UNKNOWN}!br::ufscar::lince::mmi::ink@{br::ufscar::lince::mmi::ink}}\index{br::ufscar::lince::mmi::ink@{br::ufscar::lince::mmi::ink}!UNKNOWN@{UNKNOWN}}\item[{\em 
+\hypertarget{namespacebr_1_1ufscar_1_1lince_1_1mmi_1_1ink_a857f7b80c5d28f256c70d78cacf91dababf4cfb47dbf9cc85c60abb4083518d2f}{
+UNKNOWN}
+\label{namespacebr_1_1ufscar_1_1lince_1_1mmi_1_1ink_a857f7b80c5d28f256c70d78cacf91dababf4cfb47dbf9cc85c60abb4083518d2f}
+}]\end{description}
+\end{Desc}
+
+\hypertarget{namespacebr_1_1ufscar_1_1lince_1_1mmi_1_1ink_a682c285834346cbf7587dd58c9832fe4}{
+\index{br::ufscar::lince::mmi::ink@{br::ufscar::lince::mmi::ink}!InkMLError@{InkMLError}}
+\index{InkMLError@{InkMLError}!br::ufscar::lince::mmi::ink@{br::ufscar::lince::mmi::ink}}
+\subsubsection[{InkMLError}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf br::ufscar::lince::mmi::ink::InkMLError}}}
+\label{namespacebr_1_1ufscar_1_1lince_1_1mmi_1_1ink_a682c285834346cbf7587dd58c9832fe4}
+
+
+Desc -\/ Error constants. 
+
+\begin{Desc}
+\item[Enumerator: ]\par
+\begin{description}
+\index{NoError@{NoError}!br::ufscar::lince::mmi::ink@{br::ufscar::lince::mmi::ink}}\index{br::ufscar::lince::mmi::ink@{br::ufscar::lince::mmi::ink}!NoError@{NoError}}\item[{\em 
+\hypertarget{namespacebr_1_1ufscar_1_1lince_1_1mmi_1_1ink_a682c285834346cbf7587dd58c9832fe4a32bff24228b0ec7a47a91f5736726da0}{
+NoError}
+\label{namespacebr_1_1ufscar_1_1lince_1_1mmi_1_1ink_a682c285834346cbf7587dd58c9832fe4a32bff24228b0ec7a47a91f5736726da0}
+}]\index{NoInkRoot@{NoInkRoot}!br::ufscar::lince::mmi::ink@{br::ufscar::lince::mmi::ink}}\index{br::ufscar::lince::mmi::ink@{br::ufscar::lince::mmi::ink}!NoInkRoot@{NoInkRoot}}\item[{\em 
+\hypertarget{namespacebr_1_1ufscar_1_1lince_1_1mmi_1_1ink_a682c285834346cbf7587dd58c9832fe4a8bd19fd9798a5d3bb3598c25a82abc7a}{
+NoInkRoot}
+\label{namespacebr_1_1ufscar_1_1lince_1_1mmi_1_1ink_a682c285834346cbf7587dd58c9832fe4a8bd19fd9798a5d3bb3598c25a82abc7a}
+}]\index{MalFormedXml@{MalFormedXml}!br::ufscar::lince::mmi::ink@{br::ufscar::lince::mmi::ink}}\index{br::ufscar::lince::mmi::ink@{br::ufscar::lince::mmi::ink}!MalFormedXml@{MalFormedXml}}\item[{\em 
+\hypertarget{namespacebr_1_1ufscar_1_1lince_1_1mmi_1_1ink_a682c285834346cbf7587dd58c9832fe4a8c3f0ab9c632f8200fad028d18c75953}{
+MalFormedXml}
+\label{namespacebr_1_1ufscar_1_1lince_1_1mmi_1_1ink_a682c285834346cbf7587dd58c9832fe4a8c3f0ab9c632f8200fad028d18c75953}
+}]\end{description}
+\end{Desc}
+

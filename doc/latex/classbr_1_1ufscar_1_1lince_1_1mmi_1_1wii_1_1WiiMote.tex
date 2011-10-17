@@ -1,0 +1,209 @@
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote}{
+\section{br::ufscar::lince::mmi::wii::WiiMote Class Reference}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote}\index{br::ufscar::lince::mmi::wii::WiiMote@{br::ufscar::lince::mmi::wii::WiiMote}}
+}
+
+
+{\ttfamily \#include $<$WiiMote.h$>$}
+
+Inheritance diagram for br::ufscar::lince::mmi::wii::WiiMote:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_a286176220d743bd02ee02b35970916a3}{WiiMote} (\hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiEventHandler}{WiiEventHandler} $\ast$handler, unsigned char reportEvents=\hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_a96872905a37ca4eb5902ea220217a54f}{REPORT\_\-ALL})
+\item 
+virtual \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_aa0a674eed3f5c4cebf761682dbcdf6e8}{$\sim$WiiMote} ()
+\item 
+virtual void \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_a15e0d1b2ac9fde887e870aeb597c0dc8}{connect} ()
+\begin{DoxyCompactList}\small\item\em This method stabilishes a connect between the device and the \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager}{MMIManager}, allowing the device reports his multimodal events. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_a44aa8cf98660392a91045e4892a9e65a}{disconnect} ()
+\begin{DoxyCompactList}\small\item\em This method finishes the connection between the devica and \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager}{MMIManager}. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_acd1fe851dd5909ee3cbd0fa23a070f0e}{sendToDevice} (vector$<$ string $>$ $\ast$args)
+\begin{DoxyCompactList}\small\item\em This method allows send a message to the device. \item\end{DoxyCompactList}\item 
+virtual string \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_a125dc3805711f4b5fa9327ebf719e035}{getDeviceId} ()
+\begin{DoxyCompactList}\small\item\em This method return the id of the device. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_a4d17da2514583aa3787a1d9fda1cd74c}{release} ()
+\begin{DoxyCompactList}\small\item\em This method make the device reset its internals variables. \item\end{DoxyCompactList}\item 
+bool \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_aa3b9e2935b6f0fc39b1a08260f3da66d}{isReportingButtons} ()
+\item 
+bool \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_a969959e1b25dd2660e54d1e3acd520a4}{isReportingAcceleration} ()
+\item 
+bool \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_a1eeed1b89ee5cd55fedf9f8c75561ed0}{isReportingMoves} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const unsigned char \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_af1e2bc7d7054d1b4dab67e9b278017ce}{REPORT\_\-BUTTONS}
+\item 
+static const unsigned char \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_a31e84ef1eebb0340545dcd1b3bb3a0fc}{REPORT\_\-ACCELERATION}
+\item 
+static const unsigned char \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_a95ac41c7b1b12e770e2adf6f12f48143}{REPORT\_\-MOVES}
+\item 
+static const unsigned char \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_a96872905a37ca4eb5902ea220217a54f}{REPORT\_\-ALL}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_aafcb4ce9fbe1af60e2dcc3a4baca239e}{evalueMassCenterAccX} ()
+\item 
+int \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_aa6b36913433189b48dc26595bb0f91dc}{evalueMassCenterAccY} ()
+\item 
+int \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_a0c49aa47a11e98f20fa720603a20c14f}{evalueMassCenterAccZ} ()
+\item 
+virtual void \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_ae0f3e542c2d18e7a09c2beb09562a7d4}{run} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_a286176220d743bd02ee02b35970916a3}{
+\index{br::ufscar::lince::mmi::wii::WiiMote@{br::ufscar::lince::mmi::wii::WiiMote}!WiiMote@{WiiMote}}
+\index{WiiMote@{WiiMote}!br::ufscar::lince::mmi::wii::WiiMote@{br::ufscar::lince::mmi::wii::WiiMote}}
+\subsubsection[{WiiMote}]{\setlength{\rightskip}{0pt plus 5cm}br::ufscar::lince::mmi::wii::WiiMote::WiiMote ({\bf WiiEventHandler} $\ast$ {\em handler}, \/  unsigned char {\em reportEvents} = {\ttfamily {\bf REPORT\_\-ALL}})}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_a286176220d743bd02ee02b35970916a3}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_aa0a674eed3f5c4cebf761682dbcdf6e8}{
+\index{br::ufscar::lince::mmi::wii::WiiMote@{br::ufscar::lince::mmi::wii::WiiMote}!$\sim$WiiMote@{$\sim$WiiMote}}
+\index{$\sim$WiiMote@{$\sim$WiiMote}!br::ufscar::lince::mmi::wii::WiiMote@{br::ufscar::lince::mmi::wii::WiiMote}}
+\subsubsection[{$\sim$WiiMote}]{\setlength{\rightskip}{0pt plus 5cm}virtual br::ufscar::lince::mmi::wii::WiiMote::$\sim$WiiMote ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_aa0a674eed3f5c4cebf761682dbcdf6e8}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_a15e0d1b2ac9fde887e870aeb597c0dc8}{
+\index{br::ufscar::lince::mmi::wii::WiiMote@{br::ufscar::lince::mmi::wii::WiiMote}!connect@{connect}}
+\index{connect@{connect}!br::ufscar::lince::mmi::wii::WiiMote@{br::ufscar::lince::mmi::wii::WiiMote}}
+\subsubsection[{connect}]{\setlength{\rightskip}{0pt plus 5cm}virtual void br::ufscar::lince::mmi::wii::WiiMote::connect ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_a15e0d1b2ac9fde887e870aeb597c0dc8}
+
+
+This method stabilishes a connect between the device and the \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager}{MMIManager}, allowing the device reports his multimodal events. 
+
+
+
+Implements \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1IDeviceComm_a53f48993f294b9a755125b6ccdb06ad4}{br::ufscar::lince::mmi::IDeviceComm}.
+
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_a44aa8cf98660392a91045e4892a9e65a}{
+\index{br::ufscar::lince::mmi::wii::WiiMote@{br::ufscar::lince::mmi::wii::WiiMote}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!br::ufscar::lince::mmi::wii::WiiMote@{br::ufscar::lince::mmi::wii::WiiMote}}
+\subsubsection[{disconnect}]{\setlength{\rightskip}{0pt plus 5cm}virtual void br::ufscar::lince::mmi::wii::WiiMote::disconnect ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_a44aa8cf98660392a91045e4892a9e65a}
+
+
+This method finishes the connection between the devica and \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager}{MMIManager}. 
+
+
+
+Implements \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1IDeviceComm_ad3791cf1ab234f4a6b464c3f614c78c6}{br::ufscar::lince::mmi::IDeviceComm}.
+
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_aafcb4ce9fbe1af60e2dcc3a4baca239e}{
+\index{br::ufscar::lince::mmi::wii::WiiMote@{br::ufscar::lince::mmi::wii::WiiMote}!evalueMassCenterAccX@{evalueMassCenterAccX}}
+\index{evalueMassCenterAccX@{evalueMassCenterAccX}!br::ufscar::lince::mmi::wii::WiiMote@{br::ufscar::lince::mmi::wii::WiiMote}}
+\subsubsection[{evalueMassCenterAccX}]{\setlength{\rightskip}{0pt plus 5cm}int br::ufscar::lince::mmi::wii::WiiMote::evalueMassCenterAccX ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_aafcb4ce9fbe1af60e2dcc3a4baca239e}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_aa6b36913433189b48dc26595bb0f91dc}{
+\index{br::ufscar::lince::mmi::wii::WiiMote@{br::ufscar::lince::mmi::wii::WiiMote}!evalueMassCenterAccY@{evalueMassCenterAccY}}
+\index{evalueMassCenterAccY@{evalueMassCenterAccY}!br::ufscar::lince::mmi::wii::WiiMote@{br::ufscar::lince::mmi::wii::WiiMote}}
+\subsubsection[{evalueMassCenterAccY}]{\setlength{\rightskip}{0pt plus 5cm}int br::ufscar::lince::mmi::wii::WiiMote::evalueMassCenterAccY ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_aa6b36913433189b48dc26595bb0f91dc}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_a0c49aa47a11e98f20fa720603a20c14f}{
+\index{br::ufscar::lince::mmi::wii::WiiMote@{br::ufscar::lince::mmi::wii::WiiMote}!evalueMassCenterAccZ@{evalueMassCenterAccZ}}
+\index{evalueMassCenterAccZ@{evalueMassCenterAccZ}!br::ufscar::lince::mmi::wii::WiiMote@{br::ufscar::lince::mmi::wii::WiiMote}}
+\subsubsection[{evalueMassCenterAccZ}]{\setlength{\rightskip}{0pt plus 5cm}int br::ufscar::lince::mmi::wii::WiiMote::evalueMassCenterAccZ ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_a0c49aa47a11e98f20fa720603a20c14f}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_a125dc3805711f4b5fa9327ebf719e035}{
+\index{br::ufscar::lince::mmi::wii::WiiMote@{br::ufscar::lince::mmi::wii::WiiMote}!getDeviceId@{getDeviceId}}
+\index{getDeviceId@{getDeviceId}!br::ufscar::lince::mmi::wii::WiiMote@{br::ufscar::lince::mmi::wii::WiiMote}}
+\subsubsection[{getDeviceId}]{\setlength{\rightskip}{0pt plus 5cm}virtual string br::ufscar::lince::mmi::wii::WiiMote::getDeviceId ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_a125dc3805711f4b5fa9327ebf719e035}
+
+
+This method return the id of the device. 
+
+\begin{DoxyReturn}{Returns}
+Device identification. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1IDeviceComm_a4ae69c19445713ddc9fda351555c1ac2}{br::ufscar::lince::mmi::IDeviceComm}.
+
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_a969959e1b25dd2660e54d1e3acd520a4}{
+\index{br::ufscar::lince::mmi::wii::WiiMote@{br::ufscar::lince::mmi::wii::WiiMote}!isReportingAcceleration@{isReportingAcceleration}}
+\index{isReportingAcceleration@{isReportingAcceleration}!br::ufscar::lince::mmi::wii::WiiMote@{br::ufscar::lince::mmi::wii::WiiMote}}
+\subsubsection[{isReportingAcceleration}]{\setlength{\rightskip}{0pt plus 5cm}bool br::ufscar::lince::mmi::wii::WiiMote::isReportingAcceleration ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_a969959e1b25dd2660e54d1e3acd520a4}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_aa3b9e2935b6f0fc39b1a08260f3da66d}{
+\index{br::ufscar::lince::mmi::wii::WiiMote@{br::ufscar::lince::mmi::wii::WiiMote}!isReportingButtons@{isReportingButtons}}
+\index{isReportingButtons@{isReportingButtons}!br::ufscar::lince::mmi::wii::WiiMote@{br::ufscar::lince::mmi::wii::WiiMote}}
+\subsubsection[{isReportingButtons}]{\setlength{\rightskip}{0pt plus 5cm}bool br::ufscar::lince::mmi::wii::WiiMote::isReportingButtons ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_aa3b9e2935b6f0fc39b1a08260f3da66d}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_a1eeed1b89ee5cd55fedf9f8c75561ed0}{
+\index{br::ufscar::lince::mmi::wii::WiiMote@{br::ufscar::lince::mmi::wii::WiiMote}!isReportingMoves@{isReportingMoves}}
+\index{isReportingMoves@{isReportingMoves}!br::ufscar::lince::mmi::wii::WiiMote@{br::ufscar::lince::mmi::wii::WiiMote}}
+\subsubsection[{isReportingMoves}]{\setlength{\rightskip}{0pt plus 5cm}bool br::ufscar::lince::mmi::wii::WiiMote::isReportingMoves ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_a1eeed1b89ee5cd55fedf9f8c75561ed0}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_a4d17da2514583aa3787a1d9fda1cd74c}{
+\index{br::ufscar::lince::mmi::wii::WiiMote@{br::ufscar::lince::mmi::wii::WiiMote}!release@{release}}
+\index{release@{release}!br::ufscar::lince::mmi::wii::WiiMote@{br::ufscar::lince::mmi::wii::WiiMote}}
+\subsubsection[{release}]{\setlength{\rightskip}{0pt plus 5cm}virtual void br::ufscar::lince::mmi::wii::WiiMote::release ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_a4d17da2514583aa3787a1d9fda1cd74c}
+
+
+This method make the device reset its internals variables. 
+
+
+
+Implements \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1IDeviceComm_a9c173ebb83a502e78143a52fc7d87a80}{br::ufscar::lince::mmi::IDeviceComm}.
+
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_ae0f3e542c2d18e7a09c2beb09562a7d4}{
+\index{br::ufscar::lince::mmi::wii::WiiMote@{br::ufscar::lince::mmi::wii::WiiMote}!run@{run}}
+\index{run@{run}!br::ufscar::lince::mmi::wii::WiiMote@{br::ufscar::lince::mmi::wii::WiiMote}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}virtual void br::ufscar::lince::mmi::wii::WiiMote::run ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_ae0f3e542c2d18e7a09c2beb09562a7d4}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_acd1fe851dd5909ee3cbd0fa23a070f0e}{
+\index{br::ufscar::lince::mmi::wii::WiiMote@{br::ufscar::lince::mmi::wii::WiiMote}!sendToDevice@{sendToDevice}}
+\index{sendToDevice@{sendToDevice}!br::ufscar::lince::mmi::wii::WiiMote@{br::ufscar::lince::mmi::wii::WiiMote}}
+\subsubsection[{sendToDevice}]{\setlength{\rightskip}{0pt plus 5cm}virtual void br::ufscar::lince::mmi::wii::WiiMote::sendToDevice (vector$<$ string $>$ $\ast$ {\em args})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_acd1fe851dd5909ee3cbd0fa23a070f0e}
+
+
+This method allows send a message to the device. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em args}]A array of strings that will contain the message. \end{DoxyParams}
+
+
+Implements \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1IDeviceComm_a0249a13030b4df9b50778723421375d9}{br::ufscar::lince::mmi::IDeviceComm}.
+
+
+
+\subsection{Field Documentation}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_a31e84ef1eebb0340545dcd1b3bb3a0fc}{
+\index{br::ufscar::lince::mmi::wii::WiiMote@{br::ufscar::lince::mmi::wii::WiiMote}!REPORT\_\-ACCELERATION@{REPORT\_\-ACCELERATION}}
+\index{REPORT\_\-ACCELERATION@{REPORT\_\-ACCELERATION}!br::ufscar::lince::mmi::wii::WiiMote@{br::ufscar::lince::mmi::wii::WiiMote}}
+\subsubsection[{REPORT\_\-ACCELERATION}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned char {\bf br::ufscar::lince::mmi::wii::WiiMote::REPORT\_\-ACCELERATION}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_a31e84ef1eebb0340545dcd1b3bb3a0fc}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_a96872905a37ca4eb5902ea220217a54f}{
+\index{br::ufscar::lince::mmi::wii::WiiMote@{br::ufscar::lince::mmi::wii::WiiMote}!REPORT\_\-ALL@{REPORT\_\-ALL}}
+\index{REPORT\_\-ALL@{REPORT\_\-ALL}!br::ufscar::lince::mmi::wii::WiiMote@{br::ufscar::lince::mmi::wii::WiiMote}}
+\subsubsection[{REPORT\_\-ALL}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned char {\bf br::ufscar::lince::mmi::wii::WiiMote::REPORT\_\-ALL}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_a96872905a37ca4eb5902ea220217a54f}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_af1e2bc7d7054d1b4dab67e9b278017ce}{
+\index{br::ufscar::lince::mmi::wii::WiiMote@{br::ufscar::lince::mmi::wii::WiiMote}!REPORT\_\-BUTTONS@{REPORT\_\-BUTTONS}}
+\index{REPORT\_\-BUTTONS@{REPORT\_\-BUTTONS}!br::ufscar::lince::mmi::wii::WiiMote@{br::ufscar::lince::mmi::wii::WiiMote}}
+\subsubsection[{REPORT\_\-BUTTONS}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned char {\bf br::ufscar::lince::mmi::wii::WiiMote::REPORT\_\-BUTTONS}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_af1e2bc7d7054d1b4dab67e9b278017ce}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_a95ac41c7b1b12e770e2adf6f12f48143}{
+\index{br::ufscar::lince::mmi::wii::WiiMote@{br::ufscar::lince::mmi::wii::WiiMote}!REPORT\_\-MOVES@{REPORT\_\-MOVES}}
+\index{REPORT\_\-MOVES@{REPORT\_\-MOVES}!br::ufscar::lince::mmi::wii::WiiMote@{br::ufscar::lince::mmi::wii::WiiMote}}
+\subsubsection[{REPORT\_\-MOVES}]{\setlength{\rightskip}{0pt plus 5cm}const unsigned char {\bf br::ufscar::lince::mmi::wii::WiiMote::REPORT\_\-MOVES}\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_a95ac41c7b1b12e770e2adf6f12f48143}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+include/wii/\hyperlink{WiiMote_8h}{WiiMote.h}\end{DoxyCompactItemize}

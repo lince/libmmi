@@ -1,0 +1,55 @@
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIEventListener}{
+\section{br::ufscar::lince::mmi::MMIEventListener Class Reference}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIEventListener}\index{br::ufscar::lince::mmi::MMIEventListener@{br::ufscar::lince::mmi::MMIEventListener}}
+}
+
+
+This abstract class represents a instance that can listen to MultimodalE vents.  
+
+
+
+
+{\ttfamily \#include $<$MMIEventListener.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIEventListener_a49dad88c24782f8d123289aea725e73e}{$\sim$MMIEventListener} ()
+\begin{DoxyCompactList}\small\item\em Generic Destructor. \item\end{DoxyCompactList}\item 
+virtual bool \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIEventListener_a2b7631e7ed09e2235b021fb2b5ba3b66}{receiveEvent} (\hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIEvent}{MMIEvent} $\ast$event)=0
+\begin{DoxyCompactList}\small\item\em This method receives multimodal events when they occurs. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This abstract class represents a instance that can listen to MultimodalE vents. Any application that wish be notified when a Multimodal Events occurs must implement this class and register a instance in the \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager}{MMIManager}. Everytime a Multimodal Event occurs, the methods receiveEvent of that instance will be called by the MIIManager. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIEventListener_a49dad88c24782f8d123289aea725e73e}{
+\index{br::ufscar::lince::mmi::MMIEventListener@{br::ufscar::lince::mmi::MMIEventListener}!$\sim$MMIEventListener@{$\sim$MMIEventListener}}
+\index{$\sim$MMIEventListener@{$\sim$MMIEventListener}!br::ufscar::lince::mmi::MMIEventListener@{br::ufscar::lince::mmi::MMIEventListener}}
+\subsubsection[{$\sim$MMIEventListener}]{\setlength{\rightskip}{0pt plus 5cm}virtual br::ufscar::lince::mmi::MMIEventListener::$\sim$MMIEventListener ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIEventListener_a49dad88c24782f8d123289aea725e73e}
+
+
+Generic Destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIEventListener_a2b7631e7ed09e2235b021fb2b5ba3b66}{
+\index{br::ufscar::lince::mmi::MMIEventListener@{br::ufscar::lince::mmi::MMIEventListener}!receiveEvent@{receiveEvent}}
+\index{receiveEvent@{receiveEvent}!br::ufscar::lince::mmi::MMIEventListener@{br::ufscar::lince::mmi::MMIEventListener}}
+\subsubsection[{receiveEvent}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool br::ufscar::lince::mmi::MMIEventListener::receiveEvent ({\bf MMIEvent} $\ast$ {\em event})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIEventListener_a2b7631e7ed09e2235b021fb2b5ba3b66}
+
+
+This method receives multimodal events when they occurs. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em event}]The multimodal event that occurs. \end{DoxyParams}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{MMIEventListener_8h}{MMIEventListener.h}\end{DoxyCompactItemize}

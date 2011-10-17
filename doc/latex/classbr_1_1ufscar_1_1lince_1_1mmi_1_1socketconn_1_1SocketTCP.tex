@@ -1,0 +1,94 @@
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1SocketTCP}{
+\section{br::ufscar::lince::mmi::socketconn::SocketTCP Class Reference}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1SocketTCP}\index{br::ufscar::lince::mmi::socketconn::SocketTCP@{br::ufscar::lince::mmi::socketconn::SocketTCP}}
+}
+
+
+{\ttfamily \#include $<$SocketTCP.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1SocketTCP_a98f391c314ca7210a8cdcfc666307540}{SocketTCP} (string ip, unsigned short port)
+\item 
+void \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1SocketTCP_a02b9574bbf468265f8781bd0ed2ea913}{connectSocket} ()
+\item 
+\hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1DataPayload}{DataPayload} $\ast$ \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1SocketTCP_a2b577c784c4b34867851108230c5dedd}{reciveData} ()
+\item 
+int \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1SocketTCP_ae677b051d5e7a83bd0e3b7b947c5256b}{sendData} (\hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1DataPayload}{DataPayload} $\ast$data)
+\item 
+void \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1SocketTCP_a109ecde95cef2c487193e5c256fef695}{closeConnection} ()
+\item 
+string \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1SocketTCP_a414912f61f221d793a2d9db8e919e2d5}{getIPAddress} ()
+\item 
+unsigned short \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1SocketTCP_a242631145b3bab7c7d6c08c5b76eb39a}{getPortNumber} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1SocketTCP_a9df5b18236cbacc41a53d9d4fc320a8a}{SocketTCP} (int clientSocket, sockaddr\_\-in clientAddres)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1SocketTCP_a1fb2b529851e5c95e720a67fbc1aaaa1}{ServerSocketTCP}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1SocketTCP_a98f391c314ca7210a8cdcfc666307540}{
+\index{br::ufscar::lince::mmi::socketconn::SocketTCP@{br::ufscar::lince::mmi::socketconn::SocketTCP}!SocketTCP@{SocketTCP}}
+\index{SocketTCP@{SocketTCP}!br::ufscar::lince::mmi::socketconn::SocketTCP@{br::ufscar::lince::mmi::socketconn::SocketTCP}}
+\subsubsection[{SocketTCP}]{\setlength{\rightskip}{0pt plus 5cm}br::ufscar::lince::mmi::socketconn::SocketTCP::SocketTCP (string {\em ip}, \/  unsigned short {\em port})}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1SocketTCP_a98f391c314ca7210a8cdcfc666307540}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1SocketTCP_a9df5b18236cbacc41a53d9d4fc320a8a}{
+\index{br::ufscar::lince::mmi::socketconn::SocketTCP@{br::ufscar::lince::mmi::socketconn::SocketTCP}!SocketTCP@{SocketTCP}}
+\index{SocketTCP@{SocketTCP}!br::ufscar::lince::mmi::socketconn::SocketTCP@{br::ufscar::lince::mmi::socketconn::SocketTCP}}
+\subsubsection[{SocketTCP}]{\setlength{\rightskip}{0pt plus 5cm}br::ufscar::lince::mmi::socketconn::SocketTCP::SocketTCP (int {\em clientSocket}, \/  sockaddr\_\-in {\em clientAddres})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1SocketTCP_a9df5b18236cbacc41a53d9d4fc320a8a}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1SocketTCP_a109ecde95cef2c487193e5c256fef695}{
+\index{br::ufscar::lince::mmi::socketconn::SocketTCP@{br::ufscar::lince::mmi::socketconn::SocketTCP}!closeConnection@{closeConnection}}
+\index{closeConnection@{closeConnection}!br::ufscar::lince::mmi::socketconn::SocketTCP@{br::ufscar::lince::mmi::socketconn::SocketTCP}}
+\subsubsection[{closeConnection}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::mmi::socketconn::SocketTCP::closeConnection ()}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1SocketTCP_a109ecde95cef2c487193e5c256fef695}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1SocketTCP_a02b9574bbf468265f8781bd0ed2ea913}{
+\index{br::ufscar::lince::mmi::socketconn::SocketTCP@{br::ufscar::lince::mmi::socketconn::SocketTCP}!connectSocket@{connectSocket}}
+\index{connectSocket@{connectSocket}!br::ufscar::lince::mmi::socketconn::SocketTCP@{br::ufscar::lince::mmi::socketconn::SocketTCP}}
+\subsubsection[{connectSocket}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::mmi::socketconn::SocketTCP::connectSocket ()}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1SocketTCP_a02b9574bbf468265f8781bd0ed2ea913}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1SocketTCP_a414912f61f221d793a2d9db8e919e2d5}{
+\index{br::ufscar::lince::mmi::socketconn::SocketTCP@{br::ufscar::lince::mmi::socketconn::SocketTCP}!getIPAddress@{getIPAddress}}
+\index{getIPAddress@{getIPAddress}!br::ufscar::lince::mmi::socketconn::SocketTCP@{br::ufscar::lince::mmi::socketconn::SocketTCP}}
+\subsubsection[{getIPAddress}]{\setlength{\rightskip}{0pt plus 5cm}string br::ufscar::lince::mmi::socketconn::SocketTCP::getIPAddress ()}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1SocketTCP_a414912f61f221d793a2d9db8e919e2d5}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1SocketTCP_a242631145b3bab7c7d6c08c5b76eb39a}{
+\index{br::ufscar::lince::mmi::socketconn::SocketTCP@{br::ufscar::lince::mmi::socketconn::SocketTCP}!getPortNumber@{getPortNumber}}
+\index{getPortNumber@{getPortNumber}!br::ufscar::lince::mmi::socketconn::SocketTCP@{br::ufscar::lince::mmi::socketconn::SocketTCP}}
+\subsubsection[{getPortNumber}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short br::ufscar::lince::mmi::socketconn::SocketTCP::getPortNumber ()}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1SocketTCP_a242631145b3bab7c7d6c08c5b76eb39a}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1SocketTCP_a2b577c784c4b34867851108230c5dedd}{
+\index{br::ufscar::lince::mmi::socketconn::SocketTCP@{br::ufscar::lince::mmi::socketconn::SocketTCP}!reciveData@{reciveData}}
+\index{reciveData@{reciveData}!br::ufscar::lince::mmi::socketconn::SocketTCP@{br::ufscar::lince::mmi::socketconn::SocketTCP}}
+\subsubsection[{reciveData}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DataPayload}$\ast$ br::ufscar::lince::mmi::socketconn::SocketTCP::reciveData ()}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1SocketTCP_a2b577c784c4b34867851108230c5dedd}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1SocketTCP_ae677b051d5e7a83bd0e3b7b947c5256b}{
+\index{br::ufscar::lince::mmi::socketconn::SocketTCP@{br::ufscar::lince::mmi::socketconn::SocketTCP}!sendData@{sendData}}
+\index{sendData@{sendData}!br::ufscar::lince::mmi::socketconn::SocketTCP@{br::ufscar::lince::mmi::socketconn::SocketTCP}}
+\subsubsection[{sendData}]{\setlength{\rightskip}{0pt plus 5cm}int br::ufscar::lince::mmi::socketconn::SocketTCP::sendData ({\bf DataPayload} $\ast$ {\em data})}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1SocketTCP_ae677b051d5e7a83bd0e3b7b947c5256b}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1SocketTCP_a1fb2b529851e5c95e720a67fbc1aaaa1}{
+\index{br::ufscar::lince::mmi::socketconn::SocketTCP@{br::ufscar::lince::mmi::socketconn::SocketTCP}!ServerSocketTCP@{ServerSocketTCP}}
+\index{ServerSocketTCP@{ServerSocketTCP}!br::ufscar::lince::mmi::socketconn::SocketTCP@{br::ufscar::lince::mmi::socketconn::SocketTCP}}
+\subsubsection[{ServerSocketTCP}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf ServerSocketTCP}\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1SocketTCP_a1fb2b529851e5c95e720a67fbc1aaaa1}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+include/socketconn/\hyperlink{SocketTCP_8h}{SocketTCP.h}\end{DoxyCompactItemize}

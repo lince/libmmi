@@ -1,0 +1,278 @@
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager}{
+\section{br::ufscar::lince::mmi::zeroconf::CommunicationManager Class Reference}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager}\index{br::ufscar::lince::mmi::zeroconf::CommunicationManager@{br::ufscar::lince::mmi::zeroconf::CommunicationManager}}
+}
+
+
+Classe responsável pelo recebimento via rede, usando o protocolo ZeroConf, de mensagens XML representando eventos multimodais.  
+
+
+
+
+{\ttfamily \#include $<$CommunicationManager.h$>$}
+
+Inheritance diagram for br::ufscar::lince::mmi::zeroconf::CommunicationManager:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_a580a75f652a1b1e233b6075f740555e1}{connect} ()
+\begin{DoxyCompactList}\small\item\em This method stabilishes a connect between the device and the \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager}{MMIManager}, allowing the device reports his multimodal events. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_a1c41c5541bf5c02b78f3dc10a045c7f6}{disconnect} ()
+\begin{DoxyCompactList}\small\item\em This method finishes the connection between the devica and \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager}{MMIManager}. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_a40b30969966a6517d21cf9a1cf5c3da8}{sendToDevice} (vector$<$ string $>$ $\ast$args)
+\begin{DoxyCompactList}\small\item\em This method allows send a message to the device. \item\end{DoxyCompactList}\item 
+virtual string \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_ac81ba73dafe9e2ca558fad5d46f09e8c}{getDeviceId} ()
+\begin{DoxyCompactList}\small\item\em This method return the id of the device. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_aef7bfab9cd63ab8e75fb0782e019574b}{release} ()
+\begin{DoxyCompactList}\small\item\em This method make the device reset its internals variables. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_a3f1607eb5807f50ee40882543220d0fb}{run} ()
+\begin{DoxyCompactList}\small\item\em Laço infinito em que dados representando um evento são esperados. \item\end{DoxyCompactList}\item 
+int \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_ae914529050d209469d98e2f03e42ce85}{startSocket} ()
+\begin{DoxyCompactList}\small\item\em Inicializa um socket e espera por conexões de dispositivos externos. \item\end{DoxyCompactList}\item 
+void \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_a9255db8e4fc96b6cd99b3ba67c4e79e5}{createServices} (AvahiClient $\ast$c)
+\begin{DoxyCompactList}\small\item\em Só é chamada \char`\"{}internamente\char`\"{}, mas não pode ser protected porque é chamada pelas funções de callback, que não pertencem a classe. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager}{CommunicationManager} $\ast$ \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_ae9d111bd7e4f269a80deee7bbe9c9fcd}{getInstance} ()
+\begin{DoxyCompactList}\small\item\em Acessa a instância única. \item\end{DoxyCompactList}\item 
+static void \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_ac7e195d0638ae6794150c9efb146259c}{clientCallback} (AvahiClient $\ast$c, AvahiClientState state, AVAHI\_\-GCC\_\-UNUSED void $\ast$userdata)
+\begin{DoxyCompactList}\small\item\em TODO Comentar. \item\end{DoxyCompactList}\item 
+static void \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_a53b4fbff9b68d1c90d2b6f9da2ec7da9}{entryGroupCallback} (AvahiEntryGroup $\ast$g, AvahiEntryGroupState state, AVAHI\_\-GCC\_\-UNUSED void $\ast$userdata)
+\begin{DoxyCompactList}\small\item\em TODO Comentar. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_a4bb343041bd8a27f7640a3a0405459f7}{CommunicationManager} ()
+\begin{DoxyCompactList}\small\item\em Constrói a instância única. \item\end{DoxyCompactList}\item 
+\hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_adc5185400454d122aa325f2e79017eba}{$\sim$CommunicationManager} ()
+\begin{DoxyCompactList}\small\item\em Destrói o \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager}{CommunicationManager}. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+HLoggerPtr \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_aca59ba5611ac71c96c668a6bad73405a}{logger}
+\begin{DoxyCompactList}\small\item\em Responsável pelo controle das mensagens de log. \item\end{DoxyCompactList}\item 
+AvahiEntryGroup $\ast$ \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_a45a446d4698e5e9de6faa0f7c36e5af7}{group}
+\begin{DoxyCompactList}\small\item\em TODO Comentar. \item\end{DoxyCompactList}\item 
+AvahiSimplePoll $\ast$ \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_abe4f838b42e69ac6c597c9e83a2962ff}{simplePoll}
+\begin{DoxyCompactList}\small\item\em TODO Comentar. \item\end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_aed1f1d17b6d93eee2a4b31db0530e9dd}{name}
+\begin{DoxyCompactList}\small\item\em TODO Comentar. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager}{CommunicationManager} $\ast$ \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_a661f79b7946162c5954531547e41c619}{\_\-instance}
+\begin{DoxyCompactList}\small\item\em Instância única. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classe responsável pelo recebimento via rede, usando o protocolo ZeroConf, de mensagens XML representando eventos multimodais. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_a4bb343041bd8a27f7640a3a0405459f7}{
+\index{br::ufscar::lince::mmi::zeroconf::CommunicationManager@{br::ufscar::lince::mmi::zeroconf::CommunicationManager}!CommunicationManager@{CommunicationManager}}
+\index{CommunicationManager@{CommunicationManager}!br::ufscar::lince::mmi::zeroconf::CommunicationManager@{br::ufscar::lince::mmi::zeroconf::CommunicationManager}}
+\subsubsection[{CommunicationManager}]{\setlength{\rightskip}{0pt plus 5cm}br::ufscar::lince::mmi::zeroconf::CommunicationManager::CommunicationManager ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_a4bb343041bd8a27f7640a3a0405459f7}
+
+
+Constrói a instância única. 
+
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_adc5185400454d122aa325f2e79017eba}{
+\index{br::ufscar::lince::mmi::zeroconf::CommunicationManager@{br::ufscar::lince::mmi::zeroconf::CommunicationManager}!$\sim$CommunicationManager@{$\sim$CommunicationManager}}
+\index{$\sim$CommunicationManager@{$\sim$CommunicationManager}!br::ufscar::lince::mmi::zeroconf::CommunicationManager@{br::ufscar::lince::mmi::zeroconf::CommunicationManager}}
+\subsubsection[{$\sim$CommunicationManager}]{\setlength{\rightskip}{0pt plus 5cm}br::ufscar::lince::mmi::zeroconf::CommunicationManager::$\sim$CommunicationManager ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_adc5185400454d122aa325f2e79017eba}
+
+
+Destrói o \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager}{CommunicationManager}. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_ac7e195d0638ae6794150c9efb146259c}{
+\index{br::ufscar::lince::mmi::zeroconf::CommunicationManager@{br::ufscar::lince::mmi::zeroconf::CommunicationManager}!clientCallback@{clientCallback}}
+\index{clientCallback@{clientCallback}!br::ufscar::lince::mmi::zeroconf::CommunicationManager@{br::ufscar::lince::mmi::zeroconf::CommunicationManager}}
+\subsubsection[{clientCallback}]{\setlength{\rightskip}{0pt plus 5cm}static void br::ufscar::lince::mmi::zeroconf::CommunicationManager::clientCallback (AvahiClient $\ast$ {\em c}, \/  AvahiClientState {\em state}, \/  AVAHI\_\-GCC\_\-UNUSED void $\ast$ {\em userdata})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_ac7e195d0638ae6794150c9efb146259c}
+
+
+TODO Comentar. 
+
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_a580a75f652a1b1e233b6075f740555e1}{
+\index{br::ufscar::lince::mmi::zeroconf::CommunicationManager@{br::ufscar::lince::mmi::zeroconf::CommunicationManager}!connect@{connect}}
+\index{connect@{connect}!br::ufscar::lince::mmi::zeroconf::CommunicationManager@{br::ufscar::lince::mmi::zeroconf::CommunicationManager}}
+\subsubsection[{connect}]{\setlength{\rightskip}{0pt plus 5cm}virtual void br::ufscar::lince::mmi::zeroconf::CommunicationManager::connect ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_a580a75f652a1b1e233b6075f740555e1}
+
+
+This method stabilishes a connect between the device and the \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager}{MMIManager}, allowing the device reports his multimodal events. 
+
+
+
+Implements \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1IDeviceComm_a53f48993f294b9a755125b6ccdb06ad4}{br::ufscar::lince::mmi::IDeviceComm}.
+
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_a9255db8e4fc96b6cd99b3ba67c4e79e5}{
+\index{br::ufscar::lince::mmi::zeroconf::CommunicationManager@{br::ufscar::lince::mmi::zeroconf::CommunicationManager}!createServices@{createServices}}
+\index{createServices@{createServices}!br::ufscar::lince::mmi::zeroconf::CommunicationManager@{br::ufscar::lince::mmi::zeroconf::CommunicationManager}}
+\subsubsection[{createServices}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::mmi::zeroconf::CommunicationManager::createServices (AvahiClient $\ast$ {\em c})}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_a9255db8e4fc96b6cd99b3ba67c4e79e5}
+
+
+Só é chamada \char`\"{}internamente\char`\"{}, mas não pode ser protected porque é chamada pelas funções de callback, que não pertencem a classe. 
+
+TODO Terminar de comentar \hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_a1c41c5541bf5c02b78f3dc10a045c7f6}{
+\index{br::ufscar::lince::mmi::zeroconf::CommunicationManager@{br::ufscar::lince::mmi::zeroconf::CommunicationManager}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!br::ufscar::lince::mmi::zeroconf::CommunicationManager@{br::ufscar::lince::mmi::zeroconf::CommunicationManager}}
+\subsubsection[{disconnect}]{\setlength{\rightskip}{0pt plus 5cm}virtual void br::ufscar::lince::mmi::zeroconf::CommunicationManager::disconnect ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_a1c41c5541bf5c02b78f3dc10a045c7f6}
+
+
+This method finishes the connection between the devica and \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager}{MMIManager}. 
+
+
+
+Implements \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1IDeviceComm_ad3791cf1ab234f4a6b464c3f614c78c6}{br::ufscar::lince::mmi::IDeviceComm}.
+
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_a53b4fbff9b68d1c90d2b6f9da2ec7da9}{
+\index{br::ufscar::lince::mmi::zeroconf::CommunicationManager@{br::ufscar::lince::mmi::zeroconf::CommunicationManager}!entryGroupCallback@{entryGroupCallback}}
+\index{entryGroupCallback@{entryGroupCallback}!br::ufscar::lince::mmi::zeroconf::CommunicationManager@{br::ufscar::lince::mmi::zeroconf::CommunicationManager}}
+\subsubsection[{entryGroupCallback}]{\setlength{\rightskip}{0pt plus 5cm}static void br::ufscar::lince::mmi::zeroconf::CommunicationManager::entryGroupCallback (AvahiEntryGroup $\ast$ {\em g}, \/  AvahiEntryGroupState {\em state}, \/  AVAHI\_\-GCC\_\-UNUSED void $\ast$ {\em userdata})\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_a53b4fbff9b68d1c90d2b6f9da2ec7da9}
+
+
+TODO Comentar. 
+
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_ac81ba73dafe9e2ca558fad5d46f09e8c}{
+\index{br::ufscar::lince::mmi::zeroconf::CommunicationManager@{br::ufscar::lince::mmi::zeroconf::CommunicationManager}!getDeviceId@{getDeviceId}}
+\index{getDeviceId@{getDeviceId}!br::ufscar::lince::mmi::zeroconf::CommunicationManager@{br::ufscar::lince::mmi::zeroconf::CommunicationManager}}
+\subsubsection[{getDeviceId}]{\setlength{\rightskip}{0pt plus 5cm}virtual string br::ufscar::lince::mmi::zeroconf::CommunicationManager::getDeviceId ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_ac81ba73dafe9e2ca558fad5d46f09e8c}
+
+
+This method return the id of the device. 
+
+\begin{DoxyReturn}{Returns}
+Device identification. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1IDeviceComm_a4ae69c19445713ddc9fda351555c1ac2}{br::ufscar::lince::mmi::IDeviceComm}.
+
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_ae9d111bd7e4f269a80deee7bbe9c9fcd}{
+\index{br::ufscar::lince::mmi::zeroconf::CommunicationManager@{br::ufscar::lince::mmi::zeroconf::CommunicationManager}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!br::ufscar::lince::mmi::zeroconf::CommunicationManager@{br::ufscar::lince::mmi::zeroconf::CommunicationManager}}
+\subsubsection[{getInstance}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf CommunicationManager}$\ast$ br::ufscar::lince::mmi::zeroconf::CommunicationManager::getInstance ()\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_ae9d111bd7e4f269a80deee7bbe9c9fcd}
+
+
+Acessa a instância única. 
+
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_aef7bfab9cd63ab8e75fb0782e019574b}{
+\index{br::ufscar::lince::mmi::zeroconf::CommunicationManager@{br::ufscar::lince::mmi::zeroconf::CommunicationManager}!release@{release}}
+\index{release@{release}!br::ufscar::lince::mmi::zeroconf::CommunicationManager@{br::ufscar::lince::mmi::zeroconf::CommunicationManager}}
+\subsubsection[{release}]{\setlength{\rightskip}{0pt plus 5cm}virtual void br::ufscar::lince::mmi::zeroconf::CommunicationManager::release ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_aef7bfab9cd63ab8e75fb0782e019574b}
+
+
+This method make the device reset its internals variables. 
+
+
+
+Implements \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1IDeviceComm_a9c173ebb83a502e78143a52fc7d87a80}{br::ufscar::lince::mmi::IDeviceComm}.
+
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_a3f1607eb5807f50ee40882543220d0fb}{
+\index{br::ufscar::lince::mmi::zeroconf::CommunicationManager@{br::ufscar::lince::mmi::zeroconf::CommunicationManager}!run@{run}}
+\index{run@{run}!br::ufscar::lince::mmi::zeroconf::CommunicationManager@{br::ufscar::lince::mmi::zeroconf::CommunicationManager}}
+\subsubsection[{run}]{\setlength{\rightskip}{0pt plus 5cm}virtual void br::ufscar::lince::mmi::zeroconf::CommunicationManager::run ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_a3f1607eb5807f50ee40882543220d0fb}
+
+
+Laço infinito em que dados representando um evento são esperados. 
+
+Sempre que um fluxo de dados com o conteúdo de um xml chega, o método postMultimodalEvent(string xml) é chamado. \hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_a40b30969966a6517d21cf9a1cf5c3da8}{
+\index{br::ufscar::lince::mmi::zeroconf::CommunicationManager@{br::ufscar::lince::mmi::zeroconf::CommunicationManager}!sendToDevice@{sendToDevice}}
+\index{sendToDevice@{sendToDevice}!br::ufscar::lince::mmi::zeroconf::CommunicationManager@{br::ufscar::lince::mmi::zeroconf::CommunicationManager}}
+\subsubsection[{sendToDevice}]{\setlength{\rightskip}{0pt plus 5cm}virtual void br::ufscar::lince::mmi::zeroconf::CommunicationManager::sendToDevice (vector$<$ string $>$ $\ast$ {\em args})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_a40b30969966a6517d21cf9a1cf5c3da8}
+
+
+This method allows send a message to the device. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em args}]A array of strings that will contain the message. \end{DoxyParams}
+
+
+Implements \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1IDeviceComm_a0249a13030b4df9b50778723421375d9}{br::ufscar::lince::mmi::IDeviceComm}.
+
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_ae914529050d209469d98e2f03e42ce85}{
+\index{br::ufscar::lince::mmi::zeroconf::CommunicationManager@{br::ufscar::lince::mmi::zeroconf::CommunicationManager}!startSocket@{startSocket}}
+\index{startSocket@{startSocket}!br::ufscar::lince::mmi::zeroconf::CommunicationManager@{br::ufscar::lince::mmi::zeroconf::CommunicationManager}}
+\subsubsection[{startSocket}]{\setlength{\rightskip}{0pt plus 5cm}int br::ufscar::lince::mmi::zeroconf::CommunicationManager::startSocket ()}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_ae914529050d209469d98e2f03e42ce85}
+
+
+Inicializa um socket e espera por conexões de dispositivos externos. 
+
+\begin{DoxyReturn}{Returns}
+0 em caso de sucesso e um valor diferente em caso de erro. 
+\end{DoxyReturn}
+
+
+\subsection{Field Documentation}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_a661f79b7946162c5954531547e41c619}{
+\index{br::ufscar::lince::mmi::zeroconf::CommunicationManager@{br::ufscar::lince::mmi::zeroconf::CommunicationManager}!\_\-instance@{\_\-instance}}
+\index{\_\-instance@{\_\-instance}!br::ufscar::lince::mmi::zeroconf::CommunicationManager@{br::ufscar::lince::mmi::zeroconf::CommunicationManager}}
+\subsubsection[{\_\-instance}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CommunicationManager}$\ast$ {\bf br::ufscar::lince::mmi::zeroconf::CommunicationManager::\_\-instance}\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_a661f79b7946162c5954531547e41c619}
+
+
+Instância única. 
+
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_a45a446d4698e5e9de6faa0f7c36e5af7}{
+\index{br::ufscar::lince::mmi::zeroconf::CommunicationManager@{br::ufscar::lince::mmi::zeroconf::CommunicationManager}!group@{group}}
+\index{group@{group}!br::ufscar::lince::mmi::zeroconf::CommunicationManager@{br::ufscar::lince::mmi::zeroconf::CommunicationManager}}
+\subsubsection[{group}]{\setlength{\rightskip}{0pt plus 5cm}AvahiEntryGroup$\ast$ {\bf br::ufscar::lince::mmi::zeroconf::CommunicationManager::group}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_a45a446d4698e5e9de6faa0f7c36e5af7}
+
+
+TODO Comentar. 
+
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_aca59ba5611ac71c96c668a6bad73405a}{
+\index{br::ufscar::lince::mmi::zeroconf::CommunicationManager@{br::ufscar::lince::mmi::zeroconf::CommunicationManager}!logger@{logger}}
+\index{logger@{logger}!br::ufscar::lince::mmi::zeroconf::CommunicationManager@{br::ufscar::lince::mmi::zeroconf::CommunicationManager}}
+\subsubsection[{logger}]{\setlength{\rightskip}{0pt plus 5cm}HLoggerPtr {\bf br::ufscar::lince::mmi::zeroconf::CommunicationManager::logger}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_aca59ba5611ac71c96c668a6bad73405a}
+
+
+Responsável pelo controle das mensagens de log. 
+
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_aed1f1d17b6d93eee2a4b31db0530e9dd}{
+\index{br::ufscar::lince::mmi::zeroconf::CommunicationManager@{br::ufscar::lince::mmi::zeroconf::CommunicationManager}!name@{name}}
+\index{name@{name}!br::ufscar::lince::mmi::zeroconf::CommunicationManager@{br::ufscar::lince::mmi::zeroconf::CommunicationManager}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf br::ufscar::lince::mmi::zeroconf::CommunicationManager::name}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_aed1f1d17b6d93eee2a4b31db0530e9dd}
+
+
+TODO Comentar. 
+
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_abe4f838b42e69ac6c597c9e83a2962ff}{
+\index{br::ufscar::lince::mmi::zeroconf::CommunicationManager@{br::ufscar::lince::mmi::zeroconf::CommunicationManager}!simplePoll@{simplePoll}}
+\index{simplePoll@{simplePoll}!br::ufscar::lince::mmi::zeroconf::CommunicationManager@{br::ufscar::lince::mmi::zeroconf::CommunicationManager}}
+\subsubsection[{simplePoll}]{\setlength{\rightskip}{0pt plus 5cm}AvahiSimplePoll$\ast$ {\bf br::ufscar::lince::mmi::zeroconf::CommunicationManager::simplePoll}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_abe4f838b42e69ac6c597c9e83a2962ff}
+
+
+TODO Comentar. 
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+include/zeroconf/\hyperlink{CommunicationManager_8h}{CommunicationManager.h}\end{DoxyCompactItemize}

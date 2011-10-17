@@ -1,0 +1,130 @@
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Ink}{
+\section{br::ufscar::lince::mmi::ink::Ink Class Reference}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Ink}\index{br::ufscar::lince::mmi::ink::Ink@{br::ufscar::lince::mmi::ink::Ink}}
+}
+
+
+Classe que representa dados de tinta contidos em um MultimodalInputEvent.  
+
+
+
+
+{\ttfamily \#include $<$Ink.h$>$}
+
+Inheritance diagram for br::ufscar::lince::mmi::ink::Ink:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Ink}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Ink_ada758b5f8c862e96b3bc0ab8ab5c305e}{Ink} ()
+\begin{DoxyCompactList}\small\item\em Desc -\/ constructor to create an ink document. \item\end{DoxyCompactList}\item 
+void \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Ink_a020076b1bfae4c76a9fa42f87aa618a7}{addDefinitions} (Definitions $\ast$definitions)
+\begin{DoxyCompactList}\small\item\em Desc -\/ assign the definitions state of this ink document. \item\end{DoxyCompactList}\item 
+Definitions $\ast$ \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Ink_a1a6e44946dd40a11af964dabc129d11c}{getDefinitions} ()
+\begin{DoxyCompactList}\small\item\em Desc -\/ function to get the definitions state of this ink document. \item\end{DoxyCompactList}\item 
+void \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Ink_a9fdefbe3184e360412b74675b853ad16}{addTrace} (\hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Trace}{Trace} trace)
+\begin{DoxyCompactList}\small\item\em Desc -\/ function to add a \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Trace}{Trace} to this ink document. \item\end{DoxyCompactList}\item 
+void \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Ink_a6f102e2395f0ebac1d4044291389cbf2}{normalizeTracePoint} (long width, long height)
+\begin{DoxyCompactList}\small\item\em Desc -\/ function to normalize trace sample point data to fit within the given boundary box for rendering. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1structBoundingBox}{BoundingBox} $\ast$ \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Ink_aba7f2aa5e6398319ff07182898bc21a8}{boundingBox}
+\begin{DoxyCompactList}\small\item\em Desc -\/ To capture the boundary of the rectangle inside whice the traces of this ink document would be rendered. \item\end{DoxyCompactList}\item 
+vector$<$ \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Trace}{Trace} $>$ $\ast$ \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Ink_a9dee6cfd152a6de770ac10b40e761ef8}{vectTrace}
+\begin{DoxyCompactList}\small\item\em Desc -\/ To hold all traces of this ink document. \item\end{DoxyCompactList}\item 
+Context $\ast$ \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Ink_a13e685700da2ba95fa84c48b7aa339f9}{currentContext}
+\begin{DoxyCompactList}\small\item\em Desc -\/ handle to the current context of this ink document. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classe que representa dados de tinta contidos em um MultimodalInputEvent. Mais informações em \href{http://sourceforge.net/apps/trac/inkmltk/wiki/InkMLLib}{\tt http://sourceforge.net/apps/trac/inkmltk/wiki/InkMLLib} 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Ink_ada758b5f8c862e96b3bc0ab8ab5c305e}{
+\index{br::ufscar::lince::mmi::ink::Ink@{br::ufscar::lince::mmi::ink::Ink}!Ink@{Ink}}
+\index{Ink@{Ink}!br::ufscar::lince::mmi::ink::Ink@{br::ufscar::lince::mmi::ink::Ink}}
+\subsubsection[{Ink}]{\setlength{\rightskip}{0pt plus 5cm}br::ufscar::lince::mmi::ink::Ink::Ink ()}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Ink_ada758b5f8c862e96b3bc0ab8ab5c305e}
+
+
+Desc -\/ constructor to create an ink document. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Ink_a020076b1bfae4c76a9fa42f87aa618a7}{
+\index{br::ufscar::lince::mmi::ink::Ink@{br::ufscar::lince::mmi::ink::Ink}!addDefinitions@{addDefinitions}}
+\index{addDefinitions@{addDefinitions}!br::ufscar::lince::mmi::ink::Ink@{br::ufscar::lince::mmi::ink::Ink}}
+\subsubsection[{addDefinitions}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::mmi::ink::Ink::addDefinitions (Definitions $\ast$ {\em definitions})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Ink_a020076b1bfae4c76a9fa42f87aa618a7}
+
+
+Desc -\/ assign the definitions state of this ink document. 
+
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Ink_a9fdefbe3184e360412b74675b853ad16}{
+\index{br::ufscar::lince::mmi::ink::Ink@{br::ufscar::lince::mmi::ink::Ink}!addTrace@{addTrace}}
+\index{addTrace@{addTrace}!br::ufscar::lince::mmi::ink::Ink@{br::ufscar::lince::mmi::ink::Ink}}
+\subsubsection[{addTrace}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::mmi::ink::Ink::addTrace ({\bf Trace} {\em trace})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Ink_a9fdefbe3184e360412b74675b853ad16}
+
+
+Desc -\/ function to add a \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Trace}{Trace} to this ink document. 
+
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Ink_a1a6e44946dd40a11af964dabc129d11c}{
+\index{br::ufscar::lince::mmi::ink::Ink@{br::ufscar::lince::mmi::ink::Ink}!getDefinitions@{getDefinitions}}
+\index{getDefinitions@{getDefinitions}!br::ufscar::lince::mmi::ink::Ink@{br::ufscar::lince::mmi::ink::Ink}}
+\subsubsection[{getDefinitions}]{\setlength{\rightskip}{0pt plus 5cm}Definitions$\ast$ br::ufscar::lince::mmi::ink::Ink::getDefinitions ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Ink_a1a6e44946dd40a11af964dabc129d11c}
+
+
+Desc -\/ function to get the definitions state of this ink document. 
+
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Ink_a6f102e2395f0ebac1d4044291389cbf2}{
+\index{br::ufscar::lince::mmi::ink::Ink@{br::ufscar::lince::mmi::ink::Ink}!normalizeTracePoint@{normalizeTracePoint}}
+\index{normalizeTracePoint@{normalizeTracePoint}!br::ufscar::lince::mmi::ink::Ink@{br::ufscar::lince::mmi::ink::Ink}}
+\subsubsection[{normalizeTracePoint}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::mmi::ink::Ink::normalizeTracePoint (long {\em width}, \/  long {\em height})}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Ink_a6f102e2395f0ebac1d4044291389cbf2}
+
+
+Desc -\/ function to normalize trace sample point data to fit within the given boundary box for rendering. 
+
+
+
+\subsection{Field Documentation}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Ink_aba7f2aa5e6398319ff07182898bc21a8}{
+\index{br::ufscar::lince::mmi::ink::Ink@{br::ufscar::lince::mmi::ink::Ink}!boundingBox@{boundingBox}}
+\index{boundingBox@{boundingBox}!br::ufscar::lince::mmi::ink::Ink@{br::ufscar::lince::mmi::ink::Ink}}
+\subsubsection[{boundingBox}]{\setlength{\rightskip}{0pt plus 5cm}{\bf BoundingBox}$\ast$ {\bf br::ufscar::lince::mmi::ink::Ink::boundingBox}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Ink_aba7f2aa5e6398319ff07182898bc21a8}
+
+
+Desc -\/ To capture the boundary of the rectangle inside whice the traces of this ink document would be rendered. 
+
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Ink_a13e685700da2ba95fa84c48b7aa339f9}{
+\index{br::ufscar::lince::mmi::ink::Ink@{br::ufscar::lince::mmi::ink::Ink}!currentContext@{currentContext}}
+\index{currentContext@{currentContext}!br::ufscar::lince::mmi::ink::Ink@{br::ufscar::lince::mmi::ink::Ink}}
+\subsubsection[{currentContext}]{\setlength{\rightskip}{0pt plus 5cm}Context$\ast$ {\bf br::ufscar::lince::mmi::ink::Ink::currentContext}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Ink_a13e685700da2ba95fa84c48b7aa339f9}
+
+
+Desc -\/ handle to the current context of this ink document. 
+
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Ink_a9dee6cfd152a6de770ac10b40e761ef8}{
+\index{br::ufscar::lince::mmi::ink::Ink@{br::ufscar::lince::mmi::ink::Ink}!vectTrace@{vectTrace}}
+\index{vectTrace@{vectTrace}!br::ufscar::lince::mmi::ink::Ink@{br::ufscar::lince::mmi::ink::Ink}}
+\subsubsection[{vectTrace}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Trace}$>$$\ast$ {\bf br::ufscar::lince::mmi::ink::Ink::vectTrace}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Ink_a9dee6cfd152a6de770ac10b40e761ef8}
+
+
+Desc -\/ To hold all traces of this ink document. 
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+include/ink/\hyperlink{Ink_8h}{Ink.h}\end{DoxyCompactItemize}

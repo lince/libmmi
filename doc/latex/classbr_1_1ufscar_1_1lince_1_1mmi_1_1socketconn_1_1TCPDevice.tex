@@ -1,0 +1,137 @@
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1TCPDevice}{
+\section{br::ufscar::lince::mmi::socketconn::TCPDevice Class Reference}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1TCPDevice}\index{br::ufscar::lince::mmi::socketconn::TCPDevice@{br::ufscar::lince::mmi::socketconn::TCPDevice}}
+}
+
+
+{\ttfamily \#include $<$TCPDevice.h$>$}
+
+Inheritance diagram for br::ufscar::lince::mmi::socketconn::TCPDevice:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1TCPDevice}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1TCPDevice_abad8a6e03c83f08d453c45802dbf5d24}{TCPDevice} (\hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1SocketTCP}{SocketTCP} $\ast$socket)
+\item 
+\hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1TCPDevice_a54143d24714fe38957c7f3432d7f4ddf}{$\sim$TCPDevice} ()
+\item 
+void \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1TCPDevice_a2a474f7f39371460268525b0a840cd4f}{connect} ()
+\begin{DoxyCompactList}\small\item\em This method stabilishes a connect between the device and the \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager}{MMIManager}, allowing the device reports his multimodal events. \item\end{DoxyCompactList}\item 
+void \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1TCPDevice_a5b1eca485752195ce49f03475229ca1f}{disconnect} ()
+\begin{DoxyCompactList}\small\item\em This method finishes the connection between the devica and \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager}{MMIManager}. \item\end{DoxyCompactList}\item 
+void \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1TCPDevice_a533e8c0d49d2418a244e46242dc70d99}{sendToDevice} (vector$<$ string $>$ $\ast$args)
+\begin{DoxyCompactList}\small\item\em This method allows send a message to the device. \item\end{DoxyCompactList}\item 
+string \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1TCPDevice_aa45bb0937e02c3d58c9923c369408e5a}{getDeviceId} ()
+\begin{DoxyCompactList}\small\item\em This method return the id of the device. \item\end{DoxyCompactList}\item 
+void \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1TCPDevice_a4004f2bdb8466c2613654469d0863f78}{release} ()
+\begin{DoxyCompactList}\small\item\em This method make the device reset its internals variables. \item\end{DoxyCompactList}\item 
+string \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1TCPDevice_a3d899beea9a5d297ee21931be41684ec}{getDeviceIP} ()
+\item 
+unsigned short \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1TCPDevice_a163fd810dccd2682328735a02699372d}{getDevicePort} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1TCPDevice_abad8a6e03c83f08d453c45802dbf5d24}{
+\index{br::ufscar::lince::mmi::socketconn::TCPDevice@{br::ufscar::lince::mmi::socketconn::TCPDevice}!TCPDevice@{TCPDevice}}
+\index{TCPDevice@{TCPDevice}!br::ufscar::lince::mmi::socketconn::TCPDevice@{br::ufscar::lince::mmi::socketconn::TCPDevice}}
+\subsubsection[{TCPDevice}]{\setlength{\rightskip}{0pt plus 5cm}br::ufscar::lince::mmi::socketconn::TCPDevice::TCPDevice ({\bf SocketTCP} $\ast$ {\em socket})}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1TCPDevice_abad8a6e03c83f08d453c45802dbf5d24}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1TCPDevice_a54143d24714fe38957c7f3432d7f4ddf}{
+\index{br::ufscar::lince::mmi::socketconn::TCPDevice@{br::ufscar::lince::mmi::socketconn::TCPDevice}!$\sim$TCPDevice@{$\sim$TCPDevice}}
+\index{$\sim$TCPDevice@{$\sim$TCPDevice}!br::ufscar::lince::mmi::socketconn::TCPDevice@{br::ufscar::lince::mmi::socketconn::TCPDevice}}
+\subsubsection[{$\sim$TCPDevice}]{\setlength{\rightskip}{0pt plus 5cm}br::ufscar::lince::mmi::socketconn::TCPDevice::$\sim$TCPDevice ()}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1TCPDevice_a54143d24714fe38957c7f3432d7f4ddf}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1TCPDevice_a2a474f7f39371460268525b0a840cd4f}{
+\index{br::ufscar::lince::mmi::socketconn::TCPDevice@{br::ufscar::lince::mmi::socketconn::TCPDevice}!connect@{connect}}
+\index{connect@{connect}!br::ufscar::lince::mmi::socketconn::TCPDevice@{br::ufscar::lince::mmi::socketconn::TCPDevice}}
+\subsubsection[{connect}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::mmi::socketconn::TCPDevice::connect ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1TCPDevice_a2a474f7f39371460268525b0a840cd4f}
+
+
+This method stabilishes a connect between the device and the \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager}{MMIManager}, allowing the device reports his multimodal events. 
+
+
+
+Implements \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1IDeviceComm_a53f48993f294b9a755125b6ccdb06ad4}{br::ufscar::lince::mmi::IDeviceComm}.
+
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1TCPDevice_a5b1eca485752195ce49f03475229ca1f}{
+\index{br::ufscar::lince::mmi::socketconn::TCPDevice@{br::ufscar::lince::mmi::socketconn::TCPDevice}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!br::ufscar::lince::mmi::socketconn::TCPDevice@{br::ufscar::lince::mmi::socketconn::TCPDevice}}
+\subsubsection[{disconnect}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::mmi::socketconn::TCPDevice::disconnect ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1TCPDevice_a5b1eca485752195ce49f03475229ca1f}
+
+
+This method finishes the connection between the devica and \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager}{MMIManager}. 
+
+
+
+Implements \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1IDeviceComm_ad3791cf1ab234f4a6b464c3f614c78c6}{br::ufscar::lince::mmi::IDeviceComm}.
+
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1TCPDevice_aa45bb0937e02c3d58c9923c369408e5a}{
+\index{br::ufscar::lince::mmi::socketconn::TCPDevice@{br::ufscar::lince::mmi::socketconn::TCPDevice}!getDeviceId@{getDeviceId}}
+\index{getDeviceId@{getDeviceId}!br::ufscar::lince::mmi::socketconn::TCPDevice@{br::ufscar::lince::mmi::socketconn::TCPDevice}}
+\subsubsection[{getDeviceId}]{\setlength{\rightskip}{0pt plus 5cm}string br::ufscar::lince::mmi::socketconn::TCPDevice::getDeviceId ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1TCPDevice_aa45bb0937e02c3d58c9923c369408e5a}
+
+
+This method return the id of the device. 
+
+\begin{DoxyReturn}{Returns}
+Device identification. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1IDeviceComm_a4ae69c19445713ddc9fda351555c1ac2}{br::ufscar::lince::mmi::IDeviceComm}.
+
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1TCPDevice_a3d899beea9a5d297ee21931be41684ec}{
+\index{br::ufscar::lince::mmi::socketconn::TCPDevice@{br::ufscar::lince::mmi::socketconn::TCPDevice}!getDeviceIP@{getDeviceIP}}
+\index{getDeviceIP@{getDeviceIP}!br::ufscar::lince::mmi::socketconn::TCPDevice@{br::ufscar::lince::mmi::socketconn::TCPDevice}}
+\subsubsection[{getDeviceIP}]{\setlength{\rightskip}{0pt plus 5cm}string br::ufscar::lince::mmi::socketconn::TCPDevice::getDeviceIP ()}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1TCPDevice_a3d899beea9a5d297ee21931be41684ec}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1TCPDevice_a163fd810dccd2682328735a02699372d}{
+\index{br::ufscar::lince::mmi::socketconn::TCPDevice@{br::ufscar::lince::mmi::socketconn::TCPDevice}!getDevicePort@{getDevicePort}}
+\index{getDevicePort@{getDevicePort}!br::ufscar::lince::mmi::socketconn::TCPDevice@{br::ufscar::lince::mmi::socketconn::TCPDevice}}
+\subsubsection[{getDevicePort}]{\setlength{\rightskip}{0pt plus 5cm}unsigned short br::ufscar::lince::mmi::socketconn::TCPDevice::getDevicePort ()}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1TCPDevice_a163fd810dccd2682328735a02699372d}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1TCPDevice_a4004f2bdb8466c2613654469d0863f78}{
+\index{br::ufscar::lince::mmi::socketconn::TCPDevice@{br::ufscar::lince::mmi::socketconn::TCPDevice}!release@{release}}
+\index{release@{release}!br::ufscar::lince::mmi::socketconn::TCPDevice@{br::ufscar::lince::mmi::socketconn::TCPDevice}}
+\subsubsection[{release}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::mmi::socketconn::TCPDevice::release ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1TCPDevice_a4004f2bdb8466c2613654469d0863f78}
+
+
+This method make the device reset its internals variables. 
+
+
+
+Implements \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1IDeviceComm_a9c173ebb83a502e78143a52fc7d87a80}{br::ufscar::lince::mmi::IDeviceComm}.
+
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1TCPDevice_a533e8c0d49d2418a244e46242dc70d99}{
+\index{br::ufscar::lince::mmi::socketconn::TCPDevice@{br::ufscar::lince::mmi::socketconn::TCPDevice}!sendToDevice@{sendToDevice}}
+\index{sendToDevice@{sendToDevice}!br::ufscar::lince::mmi::socketconn::TCPDevice@{br::ufscar::lince::mmi::socketconn::TCPDevice}}
+\subsubsection[{sendToDevice}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::mmi::socketconn::TCPDevice::sendToDevice (vector$<$ string $>$ $\ast$ {\em args})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1TCPDevice_a533e8c0d49d2418a244e46242dc70d99}
+
+
+This method allows send a message to the device. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em args}]A array of strings that will contain the message. \end{DoxyParams}
+
+
+Implements \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1IDeviceComm_a0249a13030b4df9b50778723421375d9}{br::ufscar::lince::mmi::IDeviceComm}.
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+include/socketconn/\hyperlink{TCPDevice_8h}{TCPDevice.h}\end{DoxyCompactItemize}

@@ -1,0 +1,174 @@
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager}{
+\section{br::ufscar::lince::mmi::MMIManager Class Reference}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager}\index{br::ufscar::lince::mmi::MMIManager@{br::ufscar::lince::mmi::MMIManager}}
+}
+
+
+This class control the multimodal interactions.  
+
+
+
+
+{\ttfamily \#include $<$MMIManager.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager_a2e9b5dd15d1c2bd1f34192193c840365}{release} ()
+\begin{DoxyCompactList}\small\item\em This method release the internal variabels of the \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager}{MMIManager}. \item\end{DoxyCompactList}\item 
+void \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager_a140389a1e17ba07406d79a427039ab1b}{postEvent} (\hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIEvent}{MMIEvent} $\ast$event)
+\begin{DoxyCompactList}\small\item\em This method allow a device driver post Multimodal events generateds. \item\end{DoxyCompactList}\item 
+void \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager_ac9208d28d50a1f9e727c34f79d7e23f0}{postXMLEvent} (\hyperlink{structbr_1_1ufscar_1_1lince_1_1mmi_1_1XMLData}{XMLData} $\ast$event)
+\begin{DoxyCompactList}\small\item\em This method allow the network services post XML Documents that represents a Multimodal Event. \item\end{DoxyCompactList}\item 
+void \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager_a724f0254692c6dddf2adea7e87286bf5}{registerDevice} (\hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1IDeviceComm}{IDeviceComm} $\ast$device, string deviceId)
+\begin{DoxyCompactList}\small\item\em This method allows devices register themselves in the \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager}{MMIManager}. \item\end{DoxyCompactList}\item 
+void \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager_a67dfd0985484c895eb0081521835dd7b}{unregisterDevice} (string deviceId)
+\begin{DoxyCompactList}\small\item\em This method allow devices unregister. \item\end{DoxyCompactList}\item 
+void \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager_a6cd07df71e304c7257c91ce145ada8f5}{addEventListener} (\hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIEventListener}{MMIEventListener} $\ast$listener, set$<$ string $>$ $\ast$eventTypes)
+\begin{DoxyCompactList}\small\item\em This method allow the registration of objects that wish receive multimodal events. \item\end{DoxyCompactList}\item 
+void \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager_af301df4426b81e014b718a0a9cfb398f}{removeEventListener} (\hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIEventListener}{MMIEventListener} $\ast$listener)
+\begin{DoxyCompactList}\small\item\em This method remove objets of the list of multimodal event listeners. \item\end{DoxyCompactList}\item 
+vector$<$ string $>$ $\ast$ \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager_a10ea6c549e2381748e8f6dbab2181942}{getDevicesName} ()
+\begin{DoxyCompactList}\small\item\em This method returns the id of all devices registred. \item\end{DoxyCompactList}\item 
+void \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager_afaf755202a19c63ec903ff1d70362126}{callDeviceService} (string deviceId, vector$<$ string $>$ $\ast$args)
+\begin{DoxyCompactList}\small\item\em This method allow applications send message to devices. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager_a1b1bf42389517969c28bfc0062e05f91}{waitForUnlockCondition} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager}{MMIManager} $\ast$ \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager_ab14c6d4285139f01cc5d67a5e650b9c4}{getInstance} ()
+\begin{DoxyCompactList}\small\item\em This method allow getting the unique instance of \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager}{MMIManager}. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class control the multimodal interactions. The application must register themselves in the instance of \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager}{MMIManager} to receive the MMIEvents that occurs. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager_a6cd07df71e304c7257c91ce145ada8f5}{
+\index{br::ufscar::lince::mmi::MMIManager@{br::ufscar::lince::mmi::MMIManager}!addEventListener@{addEventListener}}
+\index{addEventListener@{addEventListener}!br::ufscar::lince::mmi::MMIManager@{br::ufscar::lince::mmi::MMIManager}}
+\subsubsection[{addEventListener}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::mmi::MMIManager::addEventListener ({\bf MMIEventListener} $\ast$ {\em listener}, \/  set$<$ string $>$ $\ast$ {\em eventTypes})}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager_a6cd07df71e304c7257c91ce145ada8f5}
+
+
+This method allow the registration of objects that wish receive multimodal events. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em The}]instance of object that wish receive multimodal events \item[{\em eventTypes}]a set of eventTypes that the object wish receive. \end{DoxyParams}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager_afaf755202a19c63ec903ff1d70362126}{
+\index{br::ufscar::lince::mmi::MMIManager@{br::ufscar::lince::mmi::MMIManager}!callDeviceService@{callDeviceService}}
+\index{callDeviceService@{callDeviceService}!br::ufscar::lince::mmi::MMIManager@{br::ufscar::lince::mmi::MMIManager}}
+\subsubsection[{callDeviceService}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::mmi::MMIManager::callDeviceService (string {\em deviceId}, \/  vector$<$ string $>$ $\ast$ {\em args})}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager_afaf755202a19c63ec903ff1d70362126}
+
+
+This method allow applications send message to devices. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em deviceId}]The deviceId that will receive the message. \item[{\em args}]A vector with the message that will be send. \end{DoxyParams}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager_a10ea6c549e2381748e8f6dbab2181942}{
+\index{br::ufscar::lince::mmi::MMIManager@{br::ufscar::lince::mmi::MMIManager}!getDevicesName@{getDevicesName}}
+\index{getDevicesName@{getDevicesName}!br::ufscar::lince::mmi::MMIManager@{br::ufscar::lince::mmi::MMIManager}}
+\subsubsection[{getDevicesName}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$string$>$$\ast$ br::ufscar::lince::mmi::MMIManager::getDevicesName ()}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager_a10ea6c549e2381748e8f6dbab2181942}
+
+
+This method returns the id of all devices registred. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em A}]Vector with the id of all devices. \end{DoxyParams}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager_ab14c6d4285139f01cc5d67a5e650b9c4}{
+\index{br::ufscar::lince::mmi::MMIManager@{br::ufscar::lince::mmi::MMIManager}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!br::ufscar::lince::mmi::MMIManager@{br::ufscar::lince::mmi::MMIManager}}
+\subsubsection[{getInstance}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf MMIManager}$\ast$ br::ufscar::lince::mmi::MMIManager::getInstance ()\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager_ab14c6d4285139f01cc5d67a5e650b9c4}
+
+
+This method allow getting the unique instance of \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager}{MMIManager}. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em Unique}]instance of \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager}{MMIManager}. \end{DoxyParams}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager_a140389a1e17ba07406d79a427039ab1b}{
+\index{br::ufscar::lince::mmi::MMIManager@{br::ufscar::lince::mmi::MMIManager}!postEvent@{postEvent}}
+\index{postEvent@{postEvent}!br::ufscar::lince::mmi::MMIManager@{br::ufscar::lince::mmi::MMIManager}}
+\subsubsection[{postEvent}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::mmi::MMIManager::postEvent ({\bf MMIEvent} $\ast$ {\em event})}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager_a140389a1e17ba07406d79a427039ab1b}
+
+
+This method allow a device driver post Multimodal events generateds. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em event}]The Multimodal event. \end{DoxyParams}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager_ac9208d28d50a1f9e727c34f79d7e23f0}{
+\index{br::ufscar::lince::mmi::MMIManager@{br::ufscar::lince::mmi::MMIManager}!postXMLEvent@{postXMLEvent}}
+\index{postXMLEvent@{postXMLEvent}!br::ufscar::lince::mmi::MMIManager@{br::ufscar::lince::mmi::MMIManager}}
+\subsubsection[{postXMLEvent}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::mmi::MMIManager::postXMLEvent ({\bf XMLData} $\ast$ {\em event})}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager_ac9208d28d50a1f9e727c34f79d7e23f0}
+
+
+This method allow the network services post XML Documents that represents a Multimodal Event. 
+
+The XML Documents will be parsed and reposted as a instance of \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIEvent}{MMIEvent}. 
+\begin{DoxyParams}{Parameters}
+\item[{\em event}]The XML Document Representation. \end{DoxyParams}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager_a724f0254692c6dddf2adea7e87286bf5}{
+\index{br::ufscar::lince::mmi::MMIManager@{br::ufscar::lince::mmi::MMIManager}!registerDevice@{registerDevice}}
+\index{registerDevice@{registerDevice}!br::ufscar::lince::mmi::MMIManager@{br::ufscar::lince::mmi::MMIManager}}
+\subsubsection[{registerDevice}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::mmi::MMIManager::registerDevice ({\bf IDeviceComm} $\ast$ {\em device}, \/  string {\em deviceId})}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager_a724f0254692c6dddf2adea7e87286bf5}
+
+
+This method allows devices register themselves in the \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager}{MMIManager}. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em device}]The Device instance representation. \item[{\em deviceId}]The identification of the device. \end{DoxyParams}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager_a2e9b5dd15d1c2bd1f34192193c840365}{
+\index{br::ufscar::lince::mmi::MMIManager@{br::ufscar::lince::mmi::MMIManager}!release@{release}}
+\index{release@{release}!br::ufscar::lince::mmi::MMIManager@{br::ufscar::lince::mmi::MMIManager}}
+\subsubsection[{release}]{\setlength{\rightskip}{0pt plus 5cm}virtual void br::ufscar::lince::mmi::MMIManager::release ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager_a2e9b5dd15d1c2bd1f34192193c840365}
+
+
+This method release the internal variabels of the \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager}{MMIManager}. 
+
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager_af301df4426b81e014b718a0a9cfb398f}{
+\index{br::ufscar::lince::mmi::MMIManager@{br::ufscar::lince::mmi::MMIManager}!removeEventListener@{removeEventListener}}
+\index{removeEventListener@{removeEventListener}!br::ufscar::lince::mmi::MMIManager@{br::ufscar::lince::mmi::MMIManager}}
+\subsubsection[{removeEventListener}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::mmi::MMIManager::removeEventListener ({\bf MMIEventListener} $\ast$ {\em listener})}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager_af301df4426b81e014b718a0a9cfb398f}
+
+
+This method remove objets of the list of multimodal event listeners. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em listener}]The object that will be removed of the list. \end{DoxyParams}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager_a67dfd0985484c895eb0081521835dd7b}{
+\index{br::ufscar::lince::mmi::MMIManager@{br::ufscar::lince::mmi::MMIManager}!unregisterDevice@{unregisterDevice}}
+\index{unregisterDevice@{unregisterDevice}!br::ufscar::lince::mmi::MMIManager@{br::ufscar::lince::mmi::MMIManager}}
+\subsubsection[{unregisterDevice}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::mmi::MMIManager::unregisterDevice (string {\em deviceId})}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager_a67dfd0985484c895eb0081521835dd7b}
+
+
+This method allow devices unregister. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em deviceId}]The deviceId that will be unregistred. \end{DoxyParams}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager_a1b1bf42389517969c28bfc0062e05f91}{
+\index{br::ufscar::lince::mmi::MMIManager@{br::ufscar::lince::mmi::MMIManager}!waitForUnlockCondition@{waitForUnlockCondition}}
+\index{waitForUnlockCondition@{waitForUnlockCondition}!br::ufscar::lince::mmi::MMIManager@{br::ufscar::lince::mmi::MMIManager}}
+\subsubsection[{waitForUnlockCondition}]{\setlength{\rightskip}{0pt plus 5cm}virtual void br::ufscar::lince::mmi::MMIManager::waitForUnlockCondition ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager_a1b1bf42389517969c28bfc0062e05f91}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{MMIManager_8h}{MMIManager.h}\end{DoxyCompactItemize}

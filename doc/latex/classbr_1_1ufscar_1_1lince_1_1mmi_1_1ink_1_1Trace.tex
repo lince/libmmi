@@ -1,0 +1,109 @@
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Trace}{
+\section{br::ufscar::lince::mmi::ink::Trace Class Reference}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Trace}\index{br::ufscar::lince::mmi::ink::Trace@{br::ufscar::lince::mmi::ink::Trace}}
+}
+
+
+Classe que representa um trace de um InkML.  
+
+
+
+
+{\ttfamily \#include $<$Trace.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Trace_a87eb33bfb0d672cb8b15e05596c2d185}{Trace} ()
+\begin{DoxyCompactList}\small\item\em Desc -\/ constructor. \item\end{DoxyCompactList}\item 
+void \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Trace_a2a65005bfc41352c9c9253eef966e8e7}{setTraceFormatRef} (\hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1TraceFormat}{TraceFormat} $\ast$\hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Trace_a87c33c99c915d0ae5808adf580554c42}{traceFormatRef})
+\begin{DoxyCompactList}\small\item\em Desc -\/ assign traceFormat of this trace. \item\end{DoxyCompactList}\item 
+void \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Trace_aec507a4fd35f2fd65dedc3a4cd168064}{parseTraceData} (char $\ast$data, \hyperlink{structbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1structBoundingBox}{BoundingBox} $\ast$boundingBox)
+\end{DoxyCompactItemize}
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1TraceFormat}{TraceFormat} $\ast$ \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Trace_a87c33c99c915d0ae5808adf580554c42}{traceFormatRef}
+\begin{DoxyCompactList}\small\item\em Desc -\/ Reference to the associated \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1TraceFormat}{TraceFormat}. \item\end{DoxyCompactList}\item 
+vector$<$ long $>$ $\ast$ \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Trace_a9a8d9f9bbffdd49af980bdd7c80ee4ae}{vectX}
+\begin{DoxyCompactList}\small\item\em Desc -\/ To hold channel X data (i.e. \item\end{DoxyCompactList}\item 
+vector$<$ long $>$ $\ast$ \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Trace_a6914065da435b344151f55f6d60a7fdd}{vectY}
+\begin{DoxyCompactList}\small\item\em Desc -\/ To hold channel Y data (i.e. \item\end{DoxyCompactList}\item 
+vector$<$ int $>$ $\ast$ \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Trace_ab73af23278fce63da5defb36a2bc5cea}{vectF}
+\begin{DoxyCompactList}\small\item\em Desc -\/ To hold channel F data (i.e. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classe que representa um trace de um InkML. Mais informações em \href{http://sourceforge.net/apps/trac/inkmltk/wiki/InkMLLib}{\tt http://sourceforge.net/apps/trac/inkmltk/wiki/InkMLLib} 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Trace_a87eb33bfb0d672cb8b15e05596c2d185}{
+\index{br::ufscar::lince::mmi::ink::Trace@{br::ufscar::lince::mmi::ink::Trace}!Trace@{Trace}}
+\index{Trace@{Trace}!br::ufscar::lince::mmi::ink::Trace@{br::ufscar::lince::mmi::ink::Trace}}
+\subsubsection[{Trace}]{\setlength{\rightskip}{0pt plus 5cm}br::ufscar::lince::mmi::ink::Trace::Trace ()}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Trace_a87eb33bfb0d672cb8b15e05596c2d185}
+
+
+Desc -\/ constructor. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Trace_aec507a4fd35f2fd65dedc3a4cd168064}{
+\index{br::ufscar::lince::mmi::ink::Trace@{br::ufscar::lince::mmi::ink::Trace}!parseTraceData@{parseTraceData}}
+\index{parseTraceData@{parseTraceData}!br::ufscar::lince::mmi::ink::Trace@{br::ufscar::lince::mmi::ink::Trace}}
+\subsubsection[{parseTraceData}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::mmi::ink::Trace::parseTraceData (char $\ast$ {\em data}, \/  {\bf BoundingBox} $\ast$ {\em boundingBox})}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Trace_aec507a4fd35f2fd65dedc3a4cd168064}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Trace_a2a65005bfc41352c9c9253eef966e8e7}{
+\index{br::ufscar::lince::mmi::ink::Trace@{br::ufscar::lince::mmi::ink::Trace}!setTraceFormatRef@{setTraceFormatRef}}
+\index{setTraceFormatRef@{setTraceFormatRef}!br::ufscar::lince::mmi::ink::Trace@{br::ufscar::lince::mmi::ink::Trace}}
+\subsubsection[{setTraceFormatRef}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::mmi::ink::Trace::setTraceFormatRef ({\bf TraceFormat} $\ast$ {\em traceFormatRef})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Trace_a2a65005bfc41352c9c9253eef966e8e7}
+
+
+Desc -\/ assign traceFormat of this trace. 
+
+
+
+\subsection{Field Documentation}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Trace_a87c33c99c915d0ae5808adf580554c42}{
+\index{br::ufscar::lince::mmi::ink::Trace@{br::ufscar::lince::mmi::ink::Trace}!traceFormatRef@{traceFormatRef}}
+\index{traceFormatRef@{traceFormatRef}!br::ufscar::lince::mmi::ink::Trace@{br::ufscar::lince::mmi::ink::Trace}}
+\subsubsection[{traceFormatRef}]{\setlength{\rightskip}{0pt plus 5cm}{\bf TraceFormat}$\ast$ {\bf br::ufscar::lince::mmi::ink::Trace::traceFormatRef}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Trace_a87c33c99c915d0ae5808adf580554c42}
+
+
+Desc -\/ Reference to the associated \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1TraceFormat}{TraceFormat}. 
+
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Trace_ab73af23278fce63da5defb36a2bc5cea}{
+\index{br::ufscar::lince::mmi::ink::Trace@{br::ufscar::lince::mmi::ink::Trace}!vectF@{vectF}}
+\index{vectF@{vectF}!br::ufscar::lince::mmi::ink::Trace@{br::ufscar::lince::mmi::ink::Trace}}
+\subsubsection[{vectF}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$int$>$$\ast$ {\bf br::ufscar::lince::mmi::ink::Trace::vectF}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Trace_ab73af23278fce63da5defb36a2bc5cea}
+
+
+Desc -\/ To hold channel F data (i.e. 
+
+Pressure/Force co-\/ordinate data). \hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Trace_a9a8d9f9bbffdd49af980bdd7c80ee4ae}{
+\index{br::ufscar::lince::mmi::ink::Trace@{br::ufscar::lince::mmi::ink::Trace}!vectX@{vectX}}
+\index{vectX@{vectX}!br::ufscar::lince::mmi::ink::Trace@{br::ufscar::lince::mmi::ink::Trace}}
+\subsubsection[{vectX}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$long$>$$\ast$ {\bf br::ufscar::lince::mmi::ink::Trace::vectX}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Trace_a9a8d9f9bbffdd49af980bdd7c80ee4ae}
+
+
+Desc -\/ To hold channel X data (i.e. 
+
+X co-\/ordinate data). \hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Trace_a6914065da435b344151f55f6d60a7fdd}{
+\index{br::ufscar::lince::mmi::ink::Trace@{br::ufscar::lince::mmi::ink::Trace}!vectY@{vectY}}
+\index{vectY@{vectY}!br::ufscar::lince::mmi::ink::Trace@{br::ufscar::lince::mmi::ink::Trace}}
+\subsubsection[{vectY}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$long$>$$\ast$ {\bf br::ufscar::lince::mmi::ink::Trace::vectY}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Trace_a6914065da435b344151f55f6d60a7fdd}
+
+
+Desc -\/ To hold channel Y data (i.e. 
+
+Y co-\/ordinate data). 
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+include/ink/\hyperlink{Trace_8h}{Trace.h}\end{DoxyCompactItemize}

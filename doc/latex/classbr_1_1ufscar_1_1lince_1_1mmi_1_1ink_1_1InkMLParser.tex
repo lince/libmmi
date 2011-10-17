@@ -1,0 +1,120 @@
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1InkMLParser}{
+\section{br::ufscar::lince::mmi::ink::InkMLParser Class Reference}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1InkMLParser}\index{br::ufscar::lince::mmi::ink::InkMLParser@{br::ufscar::lince::mmi::ink::InkMLParser}}
+}
+
+
+Classe responsável por realizar o parser de um InkML, utilizando a biblioteca xerces.  
+
+
+
+
+{\ttfamily \#include $<$InkMLParser.h$>$}
+
+Inheritance diagram for br::ufscar::lince::mmi::ink::InkMLParser:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1InkMLParser}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1InkMLParser_a53b502493d849cc8244d5a831c0afe13}{InkMLParser} ()
+\begin{DoxyCompactList}\small\item\em Construtor da classe InKMLParser. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIEvent}{MMIEvent} $\ast$ \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1InkMLParser_aeb533c915bd5909319e3195f14993afa}{CreateEvent} (\hyperlink{structbr_1_1ufscar_1_1lince_1_1mmi_1_1XMLData}{XMLData} $\ast$data)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1InkMLParser_afa63df2f41822c11e28762f3c17b1b43}{parseDefinitions} (DOMElement $\ast$e, \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Ink}{Ink} $\ast$objInk)
+\begin{DoxyCompactList}\small\item\em Faz o parser de uma tag \char`\"{}definitions\char`\"{} e acrescenta os dados no objeto da Classe \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Ink}{Ink} recebido. \item\end{DoxyCompactList}\item 
+\hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Ink}{Ink} $\ast$ \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1InkMLParser_a77a83c6281e610f692254e0e2e96f956}{parse} (DOMElement $\ast$inkMLData, \hyperlink{namespacebr_1_1ufscar_1_1lince_1_1mmi_1_1ink_a682c285834346cbf7587dd58c9832fe4}{InkMLError} $\ast$retCode)
+\begin{DoxyCompactList}\small\item\em Faz o parser de uma tag \char`\"{}ink\char`\"{} e retorna um objeto da Classe \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Ink}{Ink}. \item\end{DoxyCompactList}\item 
+void \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1InkMLParser_ab2fdfc15cb9334ff037f2e49dd41fe42}{insertTrace} (DOMElement $\ast$child, \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Ink}{Ink} $\ast$objInk)
+\begin{DoxyCompactList}\small\item\em Faz o parser de uma tag \char`\"{}trace\char`\"{} e acrescenta os dados no objeto da Classe \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Ink}{Ink} recebido. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+HLoggerPtr \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1InkMLParser_aab8a422c5f6b431865f0b848b96f5e35}{logger}
+\begin{DoxyCompactList}\small\item\em Responsável pelo controle das mensagens de log. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classe responsável por realizar o parser de um InkML, utilizando a biblioteca xerces. Mais informações em \href{http://sourceforge.net/apps/trac/inkmltk/wiki/InkMLLib}{\tt http://sourceforge.net/apps/trac/inkmltk/wiki/InkMLLib} 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1InkMLParser_a53b502493d849cc8244d5a831c0afe13}{
+\index{br::ufscar::lince::mmi::ink::InkMLParser@{br::ufscar::lince::mmi::ink::InkMLParser}!InkMLParser@{InkMLParser}}
+\index{InkMLParser@{InkMLParser}!br::ufscar::lince::mmi::ink::InkMLParser@{br::ufscar::lince::mmi::ink::InkMLParser}}
+\subsubsection[{InkMLParser}]{\setlength{\rightskip}{0pt plus 5cm}br::ufscar::lince::mmi::ink::InkMLParser::InkMLParser ()}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1InkMLParser_a53b502493d849cc8244d5a831c0afe13}
+
+
+Construtor da classe InKMLParser. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1InkMLParser_aeb533c915bd5909319e3195f14993afa}{
+\index{br::ufscar::lince::mmi::ink::InkMLParser@{br::ufscar::lince::mmi::ink::InkMLParser}!CreateEvent@{CreateEvent}}
+\index{CreateEvent@{CreateEvent}!br::ufscar::lince::mmi::ink::InkMLParser@{br::ufscar::lince::mmi::ink::InkMLParser}}
+\subsubsection[{CreateEvent}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf MMIEvent}$\ast$ br::ufscar::lince::mmi::ink::InkMLParser::CreateEvent ({\bf XMLData} $\ast$ {\em data})\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1InkMLParser_aeb533c915bd5909319e3195f14993afa}
+
+
+Implements \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1EventFactory_a19ad2165726a29a55c921f569764290b}{br::ufscar::lince::mmi::EventFactory}.
+
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1InkMLParser_ab2fdfc15cb9334ff037f2e49dd41fe42}{
+\index{br::ufscar::lince::mmi::ink::InkMLParser@{br::ufscar::lince::mmi::ink::InkMLParser}!insertTrace@{insertTrace}}
+\index{insertTrace@{insertTrace}!br::ufscar::lince::mmi::ink::InkMLParser@{br::ufscar::lince::mmi::ink::InkMLParser}}
+\subsubsection[{insertTrace}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::mmi::ink::InkMLParser::insertTrace (DOMElement $\ast$ {\em child}, \/  {\bf Ink} $\ast$ {\em objInk})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1InkMLParser_ab2fdfc15cb9334ff037f2e49dd41fe42}
+
+
+Faz o parser de uma tag \char`\"{}trace\char`\"{} e acrescenta os dados no objeto da Classe \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Ink}{Ink} recebido. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em child}]DOMElement a ser parseado \item[{\em objInk}]Instância de \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Ink}{Ink} que receberá os dados parseados \end{DoxyParams}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1InkMLParser_a77a83c6281e610f692254e0e2e96f956}{
+\index{br::ufscar::lince::mmi::ink::InkMLParser@{br::ufscar::lince::mmi::ink::InkMLParser}!parse@{parse}}
+\index{parse@{parse}!br::ufscar::lince::mmi::ink::InkMLParser@{br::ufscar::lince::mmi::ink::InkMLParser}}
+\subsubsection[{parse}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Ink}$\ast$ br::ufscar::lince::mmi::ink::InkMLParser::parse (DOMElement $\ast$ {\em inkMLData}, \/  {\bf InkMLError} $\ast$ {\em retCode})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1InkMLParser_a77a83c6281e610f692254e0e2e96f956}
+
+
+Faz o parser de uma tag \char`\"{}ink\char`\"{} e retorna um objeto da Classe \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Ink}{Ink}. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em inkMLData}]DOMElement a ser parseado \item[{\em retCode}]Código de erro, caso ocorra, ou NoError em caso de sucesso \end{DoxyParams}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1InkMLParser_afa63df2f41822c11e28762f3c17b1b43}{
+\index{br::ufscar::lince::mmi::ink::InkMLParser@{br::ufscar::lince::mmi::ink::InkMLParser}!parseDefinitions@{parseDefinitions}}
+\index{parseDefinitions@{parseDefinitions}!br::ufscar::lince::mmi::ink::InkMLParser@{br::ufscar::lince::mmi::ink::InkMLParser}}
+\subsubsection[{parseDefinitions}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::mmi::ink::InkMLParser::parseDefinitions (DOMElement $\ast$ {\em e}, \/  {\bf Ink} $\ast$ {\em objInk})\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1InkMLParser_afa63df2f41822c11e28762f3c17b1b43}
+
+
+Faz o parser de uma tag \char`\"{}definitions\char`\"{} e acrescenta os dados no objeto da Classe \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Ink}{Ink} recebido. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em e}]DOMElement a ser parseado \item[{\em objInk}]Instância de \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1Ink}{Ink} que receberá os dados parseados \end{DoxyParams}
+
+
+\subsection{Field Documentation}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1InkMLParser_aab8a422c5f6b431865f0b848b96f5e35}{
+\index{br::ufscar::lince::mmi::ink::InkMLParser@{br::ufscar::lince::mmi::ink::InkMLParser}!logger@{logger}}
+\index{logger@{logger}!br::ufscar::lince::mmi::ink::InkMLParser@{br::ufscar::lince::mmi::ink::InkMLParser}}
+\subsubsection[{logger}]{\setlength{\rightskip}{0pt plus 5cm}HLoggerPtr {\bf br::ufscar::lince::mmi::ink::InkMLParser::logger}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1InkMLParser_aab8a422c5f6b431865f0b848b96f5e35}
+
+
+Responsável pelo controle das mensagens de log. 
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+include/ink/\hyperlink{InkMLParser_8h}{InkMLParser.h}\end{DoxyCompactItemize}

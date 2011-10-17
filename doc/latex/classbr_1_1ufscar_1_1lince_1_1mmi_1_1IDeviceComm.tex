@@ -1,0 +1,131 @@
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1IDeviceComm}{
+\section{br::ufscar::lince::mmi::IDeviceComm Class Reference}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1IDeviceComm}\index{br::ufscar::lince::mmi::IDeviceComm@{br::ufscar::lince::mmi::IDeviceComm}}
+}
+
+
+This abstract class represents a device that can generate multimodal events.  
+
+
+
+
+{\ttfamily \#include $<$IDeviceComm.h$>$}
+
+Inheritance diagram for br::ufscar::lince::mmi::IDeviceComm:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.1245cm]{classbr_1_1ufscar_1_1lince_1_1mmi_1_1IDeviceComm}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1IDeviceComm_a53f48993f294b9a755125b6ccdb06ad4}{connect} ()=0
+\begin{DoxyCompactList}\small\item\em This method stabilishes a connect between the device and the \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager}{MMIManager}, allowing the device reports his multimodal events. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1IDeviceComm_ad3791cf1ab234f4a6b464c3f614c78c6}{disconnect} ()=0
+\begin{DoxyCompactList}\small\item\em This method finishes the connection between the devica and \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager}{MMIManager}. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1IDeviceComm_a0249a13030b4df9b50778723421375d9}{sendToDevice} (vector$<$ string $>$ $\ast$args)=0
+\begin{DoxyCompactList}\small\item\em This method allows send a message to the device. \item\end{DoxyCompactList}\item 
+virtual string \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1IDeviceComm_a4ae69c19445713ddc9fda351555c1ac2}{getDeviceId} ()=0
+\begin{DoxyCompactList}\small\item\em This method return the id of the device. \item\end{DoxyCompactList}\item 
+virtual void \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1IDeviceComm_a9c173ebb83a502e78143a52fc7d87a80}{release} ()=0
+\begin{DoxyCompactList}\small\item\em This method make the device reset its internals variables. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1IDeviceComm_a413107eeac6c3141af8908d601a8de4a}{$\sim$IDeviceComm} ()
+\begin{DoxyCompactList}\small\item\em Generic Destructor. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This abstract class represents a device that can generate multimodal events. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1IDeviceComm_a413107eeac6c3141af8908d601a8de4a}{
+\index{br::ufscar::lince::mmi::IDeviceComm@{br::ufscar::lince::mmi::IDeviceComm}!$\sim$IDeviceComm@{$\sim$IDeviceComm}}
+\index{$\sim$IDeviceComm@{$\sim$IDeviceComm}!br::ufscar::lince::mmi::IDeviceComm@{br::ufscar::lince::mmi::IDeviceComm}}
+\subsubsection[{$\sim$IDeviceComm}]{\setlength{\rightskip}{0pt plus 5cm}virtual br::ufscar::lince::mmi::IDeviceComm::$\sim$IDeviceComm ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected, virtual\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1IDeviceComm_a413107eeac6c3141af8908d601a8de4a}
+
+
+Generic Destructor. 
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1IDeviceComm_a53f48993f294b9a755125b6ccdb06ad4}{
+\index{br::ufscar::lince::mmi::IDeviceComm@{br::ufscar::lince::mmi::IDeviceComm}!connect@{connect}}
+\index{connect@{connect}!br::ufscar::lince::mmi::IDeviceComm@{br::ufscar::lince::mmi::IDeviceComm}}
+\subsubsection[{connect}]{\setlength{\rightskip}{0pt plus 5cm}virtual void br::ufscar::lince::mmi::IDeviceComm::connect ()\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1IDeviceComm_a53f48993f294b9a755125b6ccdb06ad4}
+
+
+This method stabilishes a connect between the device and the \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager}{MMIManager}, allowing the device reports his multimodal events. 
+
+
+
+Implemented in \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1TCPDevice_a2a474f7f39371460268525b0a840cd4f}{br::ufscar::lince::mmi::socketconn::TCPDevice}, \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_a15e0d1b2ac9fde887e870aeb597c0dc8}{br::ufscar::lince::mmi::wii::WiiMote}, and \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_a580a75f652a1b1e233b6075f740555e1}{br::ufscar::lince::mmi::zeroconf::CommunicationManager}.
+
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1IDeviceComm_ad3791cf1ab234f4a6b464c3f614c78c6}{
+\index{br::ufscar::lince::mmi::IDeviceComm@{br::ufscar::lince::mmi::IDeviceComm}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!br::ufscar::lince::mmi::IDeviceComm@{br::ufscar::lince::mmi::IDeviceComm}}
+\subsubsection[{disconnect}]{\setlength{\rightskip}{0pt plus 5cm}virtual void br::ufscar::lince::mmi::IDeviceComm::disconnect ()\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1IDeviceComm_ad3791cf1ab234f4a6b464c3f614c78c6}
+
+
+This method finishes the connection between the devica and \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1MMIManager}{MMIManager}. 
+
+
+
+Implemented in \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1TCPDevice_a5b1eca485752195ce49f03475229ca1f}{br::ufscar::lince::mmi::socketconn::TCPDevice}, \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_a44aa8cf98660392a91045e4892a9e65a}{br::ufscar::lince::mmi::wii::WiiMote}, and \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_a1c41c5541bf5c02b78f3dc10a045c7f6}{br::ufscar::lince::mmi::zeroconf::CommunicationManager}.
+
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1IDeviceComm_a4ae69c19445713ddc9fda351555c1ac2}{
+\index{br::ufscar::lince::mmi::IDeviceComm@{br::ufscar::lince::mmi::IDeviceComm}!getDeviceId@{getDeviceId}}
+\index{getDeviceId@{getDeviceId}!br::ufscar::lince::mmi::IDeviceComm@{br::ufscar::lince::mmi::IDeviceComm}}
+\subsubsection[{getDeviceId}]{\setlength{\rightskip}{0pt plus 5cm}virtual string br::ufscar::lince::mmi::IDeviceComm::getDeviceId ()\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1IDeviceComm_a4ae69c19445713ddc9fda351555c1ac2}
+
+
+This method return the id of the device. 
+
+\begin{DoxyReturn}{Returns}
+Device identification. 
+\end{DoxyReturn}
+
+
+Implemented in \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1TCPDevice_aa45bb0937e02c3d58c9923c369408e5a}{br::ufscar::lince::mmi::socketconn::TCPDevice}, \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_a125dc3805711f4b5fa9327ebf719e035}{br::ufscar::lince::mmi::wii::WiiMote}, and \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_ac81ba73dafe9e2ca558fad5d46f09e8c}{br::ufscar::lince::mmi::zeroconf::CommunicationManager}.
+
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1IDeviceComm_a9c173ebb83a502e78143a52fc7d87a80}{
+\index{br::ufscar::lince::mmi::IDeviceComm@{br::ufscar::lince::mmi::IDeviceComm}!release@{release}}
+\index{release@{release}!br::ufscar::lince::mmi::IDeviceComm@{br::ufscar::lince::mmi::IDeviceComm}}
+\subsubsection[{release}]{\setlength{\rightskip}{0pt plus 5cm}virtual void br::ufscar::lince::mmi::IDeviceComm::release ()\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1IDeviceComm_a9c173ebb83a502e78143a52fc7d87a80}
+
+
+This method make the device reset its internals variables. 
+
+
+
+Implemented in \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1TCPDevice_a4004f2bdb8466c2613654469d0863f78}{br::ufscar::lince::mmi::socketconn::TCPDevice}, \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_a4d17da2514583aa3787a1d9fda1cd74c}{br::ufscar::lince::mmi::wii::WiiMote}, and \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_aef7bfab9cd63ab8e75fb0782e019574b}{br::ufscar::lince::mmi::zeroconf::CommunicationManager}.
+
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1IDeviceComm_a0249a13030b4df9b50778723421375d9}{
+\index{br::ufscar::lince::mmi::IDeviceComm@{br::ufscar::lince::mmi::IDeviceComm}!sendToDevice@{sendToDevice}}
+\index{sendToDevice@{sendToDevice}!br::ufscar::lince::mmi::IDeviceComm@{br::ufscar::lince::mmi::IDeviceComm}}
+\subsubsection[{sendToDevice}]{\setlength{\rightskip}{0pt plus 5cm}virtual void br::ufscar::lince::mmi::IDeviceComm::sendToDevice (vector$<$ string $>$ $\ast$ {\em args})\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1IDeviceComm_a0249a13030b4df9b50778723421375d9}
+
+
+This method allows send a message to the device. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em args}]A array of strings that will contain the message. \end{DoxyParams}
+
+
+Implemented in \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1socketconn_1_1TCPDevice_a533e8c0d49d2418a244e46242dc70d99}{br::ufscar::lince::mmi::socketconn::TCPDevice}, \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1wii_1_1WiiMote_acd1fe851dd5909ee3cbd0fa23a070f0e}{br::ufscar::lince::mmi::wii::WiiMote}, and \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1zeroconf_1_1CommunicationManager_a40b30969966a6517d21cf9a1cf5c3da8}{br::ufscar::lince::mmi::zeroconf::CommunicationManager}.
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{IDeviceComm_8h}{IDeviceComm.h}\end{DoxyCompactItemize}

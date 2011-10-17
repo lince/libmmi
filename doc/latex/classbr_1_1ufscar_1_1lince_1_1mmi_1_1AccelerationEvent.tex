@@ -1,0 +1,163 @@
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1AccelerationEvent}{
+\section{br::ufscar::lince::mmi::AccelerationEvent Class Reference}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1AccelerationEvent}\index{br::ufscar::lince::mmi::AccelerationEvent@{br::ufscar::lince::mmi::AccelerationEvent}}
+}
+
+
+{\ttfamily \#include $<$AccelerationEvent.h$>$}
+
+Inheritance diagram for br::ufscar::lince::mmi::AccelerationEvent:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classbr_1_1ufscar_1_1lince_1_1mmi_1_1AccelerationEvent}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1AccelerationEvent_a0b697e055fc5bb1c3947435f0c25bd5d}{AccelerationEvent} (string deviceid, int \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1AccelerationEvent_aa8aa3708d87ebf38147a09b4d83eb604}{xValue}, int \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1AccelerationEvent_a1b87b4708c1f8ce65293b7fc3a148183}{yValue}, int \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1AccelerationEvent_a2fea6058c45c23e43ce8eb6f829a4990}{zValue})
+\begin{DoxyCompactList}\small\item\em Construtor. \item\end{DoxyCompactList}\item 
+virtual \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1AccelerationEvent_ab80cc047d3044e1450fb74bb1e62f8ab}{$\sim$AccelerationEvent} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \item\end{DoxyCompactList}\item 
+virtual int \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1AccelerationEvent_a3e4798af9e022dbf7cdef27976437956}{getXValue} ()
+\begin{DoxyCompactList}\small\item\em This method return the acceleration value of X axis. \item\end{DoxyCompactList}\item 
+virtual int \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1AccelerationEvent_aa647428aca2ae84a2b9a58d5dd51ebb0}{getYValue} ()
+\begin{DoxyCompactList}\small\item\em This method return the acceleration value of Y axis. \item\end{DoxyCompactList}\item 
+virtual int \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1AccelerationEvent_a311a142a28339e32a09ba84971617351}{getZValue} ()
+\begin{DoxyCompactList}\small\item\em This method return the acceleration value of Z axis. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1AccelerationEvent_aaf9298b6242c8894e04111a344add1fe}{AccelerationEvent} ()
+\item 
+void \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1AccelerationEvent_a5ad5b14f13e40450e619ce08e4ba9937}{parseXMLData} (\hyperlink{structbr_1_1ufscar_1_1lince_1_1mmi_1_1XMLData}{XMLData} $\ast$data)
+\begin{DoxyCompactList}\small\item\em This methods realize the parse of a event represented by a XML Document. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1AccelerationEvent_aa8aa3708d87ebf38147a09b4d83eb604}{xValue}
+\item 
+int \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1AccelerationEvent_a1b87b4708c1f8ce65293b7fc3a148183}{yValue}
+\item 
+int \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1AccelerationEvent_a2fea6058c45c23e43ce8eb6f829a4990}{zValue}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1AccelerationEvent_a5414bf6fb99d97af5a0b33c831e67026}{AccelerationFactory}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1AccelerationEvent_a0b697e055fc5bb1c3947435f0c25bd5d}{
+\index{br::ufscar::lince::mmi::AccelerationEvent@{br::ufscar::lince::mmi::AccelerationEvent}!AccelerationEvent@{AccelerationEvent}}
+\index{AccelerationEvent@{AccelerationEvent}!br::ufscar::lince::mmi::AccelerationEvent@{br::ufscar::lince::mmi::AccelerationEvent}}
+\subsubsection[{AccelerationEvent}]{\setlength{\rightskip}{0pt plus 5cm}br::ufscar::lince::mmi::AccelerationEvent::AccelerationEvent (string {\em deviceid}, \/  int {\em xValue}, \/  int {\em yValue}, \/  int {\em zValue})}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1AccelerationEvent_a0b697e055fc5bb1c3947435f0c25bd5d}
+
+
+Construtor. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em deviceId}]The id of the device that generate the acceleration event. \item[{\em xValue}]The acceleration value of X axis. \item[{\em yValue}]The acceleration value of Y axis. \item[{\em zValue}]The acceleration value of Z axis. \end{DoxyParams}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1AccelerationEvent_ab80cc047d3044e1450fb74bb1e62f8ab}{
+\index{br::ufscar::lince::mmi::AccelerationEvent@{br::ufscar::lince::mmi::AccelerationEvent}!$\sim$AccelerationEvent@{$\sim$AccelerationEvent}}
+\index{$\sim$AccelerationEvent@{$\sim$AccelerationEvent}!br::ufscar::lince::mmi::AccelerationEvent@{br::ufscar::lince::mmi::AccelerationEvent}}
+\subsubsection[{$\sim$AccelerationEvent}]{\setlength{\rightskip}{0pt plus 5cm}virtual br::ufscar::lince::mmi::AccelerationEvent::$\sim$AccelerationEvent ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1AccelerationEvent_ab80cc047d3044e1450fb74bb1e62f8ab}
+
+
+Destructor. 
+
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1AccelerationEvent_aaf9298b6242c8894e04111a344add1fe}{
+\index{br::ufscar::lince::mmi::AccelerationEvent@{br::ufscar::lince::mmi::AccelerationEvent}!AccelerationEvent@{AccelerationEvent}}
+\index{AccelerationEvent@{AccelerationEvent}!br::ufscar::lince::mmi::AccelerationEvent@{br::ufscar::lince::mmi::AccelerationEvent}}
+\subsubsection[{AccelerationEvent}]{\setlength{\rightskip}{0pt plus 5cm}br::ufscar::lince::mmi::AccelerationEvent::AccelerationEvent ()\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1AccelerationEvent_aaf9298b6242c8894e04111a344add1fe}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1AccelerationEvent_a3e4798af9e022dbf7cdef27976437956}{
+\index{br::ufscar::lince::mmi::AccelerationEvent@{br::ufscar::lince::mmi::AccelerationEvent}!getXValue@{getXValue}}
+\index{getXValue@{getXValue}!br::ufscar::lince::mmi::AccelerationEvent@{br::ufscar::lince::mmi::AccelerationEvent}}
+\subsubsection[{getXValue}]{\setlength{\rightskip}{0pt plus 5cm}virtual int br::ufscar::lince::mmi::AccelerationEvent::getXValue ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1AccelerationEvent_a3e4798af9e022dbf7cdef27976437956}
+
+
+This method return the acceleration value of X axis. 
+
+\begin{DoxyReturn}{Returns}
+X axis Acceleration value of this Acceleration Event. 
+\end{DoxyReturn}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1AccelerationEvent_aa647428aca2ae84a2b9a58d5dd51ebb0}{
+\index{br::ufscar::lince::mmi::AccelerationEvent@{br::ufscar::lince::mmi::AccelerationEvent}!getYValue@{getYValue}}
+\index{getYValue@{getYValue}!br::ufscar::lince::mmi::AccelerationEvent@{br::ufscar::lince::mmi::AccelerationEvent}}
+\subsubsection[{getYValue}]{\setlength{\rightskip}{0pt plus 5cm}virtual int br::ufscar::lince::mmi::AccelerationEvent::getYValue ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1AccelerationEvent_aa647428aca2ae84a2b9a58d5dd51ebb0}
+
+
+This method return the acceleration value of Y axis. 
+
+\begin{DoxyReturn}{Returns}
+Y axis Acceleration value of this Acceleration Event. 
+\end{DoxyReturn}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1AccelerationEvent_a311a142a28339e32a09ba84971617351}{
+\index{br::ufscar::lince::mmi::AccelerationEvent@{br::ufscar::lince::mmi::AccelerationEvent}!getZValue@{getZValue}}
+\index{getZValue@{getZValue}!br::ufscar::lince::mmi::AccelerationEvent@{br::ufscar::lince::mmi::AccelerationEvent}}
+\subsubsection[{getZValue}]{\setlength{\rightskip}{0pt plus 5cm}virtual int br::ufscar::lince::mmi::AccelerationEvent::getZValue ()\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1AccelerationEvent_a311a142a28339e32a09ba84971617351}
+
+
+This method return the acceleration value of Z axis. 
+
+\begin{DoxyReturn}{Returns}
+Z axis Acceleration value of this Acceleration Event. 
+\end{DoxyReturn}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1AccelerationEvent_a5ad5b14f13e40450e619ce08e4ba9937}{
+\index{br::ufscar::lince::mmi::AccelerationEvent@{br::ufscar::lince::mmi::AccelerationEvent}!parseXMLData@{parseXMLData}}
+\index{parseXMLData@{parseXMLData}!br::ufscar::lince::mmi::AccelerationEvent@{br::ufscar::lince::mmi::AccelerationEvent}}
+\subsubsection[{parseXMLData}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::mmi::AccelerationEvent::parseXMLData ({\bf XMLData} $\ast$ {\em data})\hspace{0.3cm}{\ttfamily  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1AccelerationEvent_a5ad5b14f13e40450e619ce08e4ba9937}
+
+
+This methods realize the parse of a event represented by a XML Document. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em data}]A instance of \hyperlink{structbr_1_1ufscar_1_1lince_1_1mmi_1_1XMLData}{XMLData} that contains the XML Document information. \end{DoxyParams}
+
+
+Implements \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1Parsable_a6524a0a77abb3865e5d255e466b6159e}{br::ufscar::lince::mmi::Parsable}.
+
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1AccelerationEvent_a5414bf6fb99d97af5a0b33c831e67026}{
+\index{br::ufscar::lince::mmi::AccelerationEvent@{br::ufscar::lince::mmi::AccelerationEvent}!AccelerationFactory@{AccelerationFactory}}
+\index{AccelerationFactory@{AccelerationFactory}!br::ufscar::lince::mmi::AccelerationEvent@{br::ufscar::lince::mmi::AccelerationEvent}}
+\subsubsection[{AccelerationFactory}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf AccelerationFactory}\hspace{0.3cm}{\ttfamily  \mbox{[}friend\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1AccelerationEvent_a5414bf6fb99d97af5a0b33c831e67026}
+
+
+\subsection{Field Documentation}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1AccelerationEvent_aa8aa3708d87ebf38147a09b4d83eb604}{
+\index{br::ufscar::lince::mmi::AccelerationEvent@{br::ufscar::lince::mmi::AccelerationEvent}!xValue@{xValue}}
+\index{xValue@{xValue}!br::ufscar::lince::mmi::AccelerationEvent@{br::ufscar::lince::mmi::AccelerationEvent}}
+\subsubsection[{xValue}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf br::ufscar::lince::mmi::AccelerationEvent::xValue}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1AccelerationEvent_aa8aa3708d87ebf38147a09b4d83eb604}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1AccelerationEvent_a1b87b4708c1f8ce65293b7fc3a148183}{
+\index{br::ufscar::lince::mmi::AccelerationEvent@{br::ufscar::lince::mmi::AccelerationEvent}!yValue@{yValue}}
+\index{yValue@{yValue}!br::ufscar::lince::mmi::AccelerationEvent@{br::ufscar::lince::mmi::AccelerationEvent}}
+\subsubsection[{yValue}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf br::ufscar::lince::mmi::AccelerationEvent::yValue}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1AccelerationEvent_a1b87b4708c1f8ce65293b7fc3a148183}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1AccelerationEvent_a2fea6058c45c23e43ce8eb6f829a4990}{
+\index{br::ufscar::lince::mmi::AccelerationEvent@{br::ufscar::lince::mmi::AccelerationEvent}!zValue@{zValue}}
+\index{zValue@{zValue}!br::ufscar::lince::mmi::AccelerationEvent@{br::ufscar::lince::mmi::AccelerationEvent}}
+\subsubsection[{zValue}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf br::ufscar::lince::mmi::AccelerationEvent::zValue}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1AccelerationEvent_a2fea6058c45c23e43ce8eb6f829a4990}
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{AccelerationEvent_8h}{AccelerationEvent.h}\end{DoxyCompactItemize}

@@ -1,0 +1,164 @@
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1TraceFormat}{
+\section{br::ufscar::lince::mmi::ink::TraceFormat Class Reference}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1TraceFormat}\index{br::ufscar::lince::mmi::ink::TraceFormat@{br::ufscar::lince::mmi::ink::TraceFormat}}
+}
+
+
+Classe que representa o formato de um trace de um InkML.  
+
+
+
+
+{\ttfamily \#include $<$TraceFormat.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1TraceFormat_a94ab4a2d743d17fb14c2af98a62b0550}{TraceFormat} ()
+\begin{DoxyCompactList}\small\item\em Desc -\/ Constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1TraceFormat_ae3d05ea0cfd71e7af419ddc36b05cdc8}{TraceFormat} (char $\ast$\hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1TraceFormat_ad89fcbbb40fb5691df020fa57b325f44}{id})
+\begin{DoxyCompactList}\small\item\em Construtor. \item\end{DoxyCompactList}\item 
+void \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1TraceFormat_a4f21a24e009159e4062f2a2a47cc68fc}{addChannelOrder} (\hyperlink{namespacebr_1_1ufscar_1_1lince_1_1mmi_1_1ink_a857f7b80c5d28f256c70d78cacf91dab}{CHANNEL} c)
+\begin{DoxyCompactList}\small\item\em Adiciona um channel. \item\end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1TraceFormat_afc72b9eb02901fb2a58c159b73231c6a}{getID} ()
+\begin{DoxyCompactList}\small\item\em Acessa o ID do traceFormat. \item\end{DoxyCompactList}\item 
+\hyperlink{namespacebr_1_1ufscar_1_1lince_1_1mmi_1_1ink_a857f7b80c5d28f256c70d78cacf91dab}{CHANNEL} \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1TraceFormat_af6c038f7182928e11aedafe61a7f1af0}{getChannelAtIndex} (int index)
+\begin{DoxyCompactList}\small\item\em Acessa um determinado channel. \item\end{DoxyCompactList}\item 
+void \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1TraceFormat_a5427bd1c07566f405591f38dfd2ec5f9}{addChannelOrder} (char $\ast$c)
+\begin{DoxyCompactList}\small\item\em Adiciona um channel. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1TraceFormat_ad89fcbbb40fb5691df020fa57b325f44}{id}
+\begin{DoxyCompactList}\small\item\em Id do traceFormat. \item\end{DoxyCompactList}\item 
+bool \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1TraceFormat_ab503ce06d24067ab5f7611793116160e}{channelFPresent}
+\begin{DoxyCompactList}\small\item\em Desc -\/ By default only X and Y channels are present This flag is to know whether pressure is present or not. \item\end{DoxyCompactList}\item 
+vector$<$ Channel $>$ $\ast$ \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1TraceFormat_a7a441396c4a7f0d3a0d05bff74495f37}{vectChannel}
+\begin{DoxyCompactList}\small\item\em Lista de channels. \item\end{DoxyCompactList}\item 
+vector$<$ \hyperlink{namespacebr_1_1ufscar_1_1lince_1_1mmi_1_1ink_a857f7b80c5d28f256c70d78cacf91dab}{CHANNEL} $>$ $\ast$ \hyperlink{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1TraceFormat_ab69e1f7711dde259cb5ef481d025f556}{vectChannelOrder}
+\begin{DoxyCompactList}\small\item\em Lista de channels. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classe que representa o formato de um trace de um InkML. Mais informações em \href{http://sourceforge.net/apps/trac/inkmltk/wiki/InkMLLib}{\tt http://sourceforge.net/apps/trac/inkmltk/wiki/InkMLLib} 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1TraceFormat_a94ab4a2d743d17fb14c2af98a62b0550}{
+\index{br::ufscar::lince::mmi::ink::TraceFormat@{br::ufscar::lince::mmi::ink::TraceFormat}!TraceFormat@{TraceFormat}}
+\index{TraceFormat@{TraceFormat}!br::ufscar::lince::mmi::ink::TraceFormat@{br::ufscar::lince::mmi::ink::TraceFormat}}
+\subsubsection[{TraceFormat}]{\setlength{\rightskip}{0pt plus 5cm}br::ufscar::lince::mmi::ink::TraceFormat::TraceFormat ()}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1TraceFormat_a94ab4a2d743d17fb14c2af98a62b0550}
+
+
+Desc -\/ Constructor. 
+
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1TraceFormat_ae3d05ea0cfd71e7af419ddc36b05cdc8}{
+\index{br::ufscar::lince::mmi::ink::TraceFormat@{br::ufscar::lince::mmi::ink::TraceFormat}!TraceFormat@{TraceFormat}}
+\index{TraceFormat@{TraceFormat}!br::ufscar::lince::mmi::ink::TraceFormat@{br::ufscar::lince::mmi::ink::TraceFormat}}
+\subsubsection[{TraceFormat}]{\setlength{\rightskip}{0pt plus 5cm}br::ufscar::lince::mmi::ink::TraceFormat::TraceFormat (char $\ast$ {\em id})}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1TraceFormat_ae3d05ea0cfd71e7af419ddc36b05cdc8}
+
+
+Construtor. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em id}]do traceFormat. \end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1TraceFormat_a5427bd1c07566f405591f38dfd2ec5f9}{
+\index{br::ufscar::lince::mmi::ink::TraceFormat@{br::ufscar::lince::mmi::ink::TraceFormat}!addChannelOrder@{addChannelOrder}}
+\index{addChannelOrder@{addChannelOrder}!br::ufscar::lince::mmi::ink::TraceFormat@{br::ufscar::lince::mmi::ink::TraceFormat}}
+\subsubsection[{addChannelOrder}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::mmi::ink::TraceFormat::addChannelOrder (char $\ast$ {\em c})}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1TraceFormat_a5427bd1c07566f405591f38dfd2ec5f9}
+
+
+Adiciona um channel. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em c}]Channel a ser adicionado. \end{DoxyParams}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1TraceFormat_a4f21a24e009159e4062f2a2a47cc68fc}{
+\index{br::ufscar::lince::mmi::ink::TraceFormat@{br::ufscar::lince::mmi::ink::TraceFormat}!addChannelOrder@{addChannelOrder}}
+\index{addChannelOrder@{addChannelOrder}!br::ufscar::lince::mmi::ink::TraceFormat@{br::ufscar::lince::mmi::ink::TraceFormat}}
+\subsubsection[{addChannelOrder}]{\setlength{\rightskip}{0pt plus 5cm}void br::ufscar::lince::mmi::ink::TraceFormat::addChannelOrder ({\bf CHANNEL} {\em c})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1TraceFormat_a4f21a24e009159e4062f2a2a47cc68fc}
+
+
+Adiciona um channel. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em c}]Channel a ser adicionado. \end{DoxyParams}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1TraceFormat_af6c038f7182928e11aedafe61a7f1af0}{
+\index{br::ufscar::lince::mmi::ink::TraceFormat@{br::ufscar::lince::mmi::ink::TraceFormat}!getChannelAtIndex@{getChannelAtIndex}}
+\index{getChannelAtIndex@{getChannelAtIndex}!br::ufscar::lince::mmi::ink::TraceFormat@{br::ufscar::lince::mmi::ink::TraceFormat}}
+\subsubsection[{getChannelAtIndex}]{\setlength{\rightskip}{0pt plus 5cm}{\bf CHANNEL} br::ufscar::lince::mmi::ink::TraceFormat::getChannelAtIndex (int {\em index})}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1TraceFormat_af6c038f7182928e11aedafe61a7f1af0}
+
+
+Acessa um determinado channel. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em index}]Índice do channel a ser acessado \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O channel 
+\end{DoxyReturn}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1TraceFormat_afc72b9eb02901fb2a58c159b73231c6a}{
+\index{br::ufscar::lince::mmi::ink::TraceFormat@{br::ufscar::lince::mmi::ink::TraceFormat}!getID@{getID}}
+\index{getID@{getID}!br::ufscar::lince::mmi::ink::TraceFormat@{br::ufscar::lince::mmi::ink::TraceFormat}}
+\subsubsection[{getID}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ br::ufscar::lince::mmi::ink::TraceFormat::getID ()\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1TraceFormat_afc72b9eb02901fb2a58c159b73231c6a}
+
+
+Acessa o ID do traceFormat. 
+
+\begin{DoxyReturn}{Returns}
+id do traceFormat. 
+\end{DoxyReturn}
+
+
+\subsection{Field Documentation}
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1TraceFormat_ab503ce06d24067ab5f7611793116160e}{
+\index{br::ufscar::lince::mmi::ink::TraceFormat@{br::ufscar::lince::mmi::ink::TraceFormat}!channelFPresent@{channelFPresent}}
+\index{channelFPresent@{channelFPresent}!br::ufscar::lince::mmi::ink::TraceFormat@{br::ufscar::lince::mmi::ink::TraceFormat}}
+\subsubsection[{channelFPresent}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf br::ufscar::lince::mmi::ink::TraceFormat::channelFPresent}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1TraceFormat_ab503ce06d24067ab5f7611793116160e}
+
+
+Desc -\/ By default only X and Y channels are present This flag is to know whether pressure is present or not. 
+
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1TraceFormat_ad89fcbbb40fb5691df020fa57b325f44}{
+\index{br::ufscar::lince::mmi::ink::TraceFormat@{br::ufscar::lince::mmi::ink::TraceFormat}!id@{id}}
+\index{id@{id}!br::ufscar::lince::mmi::ink::TraceFormat@{br::ufscar::lince::mmi::ink::TraceFormat}}
+\subsubsection[{id}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ {\bf br::ufscar::lince::mmi::ink::TraceFormat::id}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1TraceFormat_ad89fcbbb40fb5691df020fa57b325f44}
+
+
+Id do traceFormat. 
+
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1TraceFormat_a7a441396c4a7f0d3a0d05bff74495f37}{
+\index{br::ufscar::lince::mmi::ink::TraceFormat@{br::ufscar::lince::mmi::ink::TraceFormat}!vectChannel@{vectChannel}}
+\index{vectChannel@{vectChannel}!br::ufscar::lince::mmi::ink::TraceFormat@{br::ufscar::lince::mmi::ink::TraceFormat}}
+\subsubsection[{vectChannel}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$Channel$>$$\ast$ {\bf br::ufscar::lince::mmi::ink::TraceFormat::vectChannel}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1TraceFormat_a7a441396c4a7f0d3a0d05bff74495f37}
+
+
+Lista de channels. 
+
+\hypertarget{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1TraceFormat_ab69e1f7711dde259cb5ef481d025f556}{
+\index{br::ufscar::lince::mmi::ink::TraceFormat@{br::ufscar::lince::mmi::ink::TraceFormat}!vectChannelOrder@{vectChannelOrder}}
+\index{vectChannelOrder@{vectChannelOrder}!br::ufscar::lince::mmi::ink::TraceFormat@{br::ufscar::lince::mmi::ink::TraceFormat}}
+\subsubsection[{vectChannelOrder}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf CHANNEL}$>$$\ast$ {\bf br::ufscar::lince::mmi::ink::TraceFormat::vectChannelOrder}}}
+\label{classbr_1_1ufscar_1_1lince_1_1mmi_1_1ink_1_1TraceFormat_ab69e1f7711dde259cb5ef481d025f556}
+
+
+Lista de channels. 
+
+
+
+The documentation for this class was generated from the following file:\begin{DoxyCompactItemize}
+\item 
+include/ink/\hyperlink{TraceFormat_8h}{TraceFormat.h}\end{DoxyCompactItemize}
