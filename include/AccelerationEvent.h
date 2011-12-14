@@ -8,8 +8,9 @@
 #ifndef ACCELERATIONEVENT_H_
 #define ACCELERATIONEVENT_H_
 
-#include <cpputil/logger/Logger.h>
-using namespace cpputil::logger;
+#include <string>
+
+#include <libcpputil/logger/Logger.h>
 
 #include "MMIEvent.h"
 #include "Parsable.h"
@@ -27,7 +28,7 @@ class AccelerationFactory;
 class AccelerationEvent :
 				public MMIEvent,
 				public Parsable,
-				public Loggable {
+				public cpputil::logger::Loggable {
 public:
 
 	/**
@@ -37,7 +38,7 @@ public:
 	 * @param yValue The acceleration value of Y axis.
 	 * @param zValue The acceleration value of Z axis.
 	 */
-	AccelerationEvent(string deviceid, int xValue, int yValue, int zValue);
+	AccelerationEvent(std::string deviceid, int xValue, int yValue, int zValue);
 
 	/**
 	 * Destructor
@@ -65,13 +66,12 @@ public:
 protected:
 	AccelerationEvent();
 	void parseXMLData(XMLData* data);
-	void parseJson(string jsonString);
+	void parseJson(std::string jsonString);
 
 protected:
 	int xValue;
 	int yValue;
 	int zValue;
-	Logger* logger;
 
 friend class AccelerationFactory;
 };

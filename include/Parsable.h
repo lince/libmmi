@@ -9,7 +9,6 @@
 #define XMLEVENT_H_
 
 #include <string>
-using namespace std;
 
 #include <xercesc/dom/DOM.hpp>
 XERCES_CPP_NAMESPACE_USE
@@ -38,22 +37,22 @@ typedef struct {
 	/**
 	 * The event of the id represented by the XML Document, if any.
 	 */
-	string eventId;
+	std::string eventId;
 
 	/**
 	 * The device id that generate the XMLDocument.
 	 */
-	string deviceId;
+	std::string deviceId;
 
 	/**
 	 * The model of the device that generate the XML Document.
 	 */
-	string deviceModel;
+	std::string deviceModel;
 
 	/**
 	 * The type of event represented by the XML Document.
 	 */
-	string eventType;
+	std::string eventType;
 
 	/**
 	 * A pointer to the DOMElement that represents the XML Document.
@@ -80,7 +79,7 @@ public:
 	 * setting up the current instance with the given information.
 	 * @param jsonString A string that contains the XML Document information
 	 */
-	virtual void parseJson(string jsonString) = 0;
+	virtual void parseJson(std::string jsonString) = 0;
 
 	/**
 	 * Generic Contructor.

@@ -10,7 +10,6 @@
 
 #include <string>
 #include <vector>
-using namespace std;
 
 namespace br {
 namespace ufscar {
@@ -38,13 +37,13 @@ public:
 	 * This method allows send a message to the device.
 	 * @param args A array of strings that will contain the message.
 	 */
-	virtual void sendToDevice(vector<string>* args) = 0;
+	virtual void sendToDevice(std::vector<std::string>* args) = 0;
 
 	/**
 	 * This method return the id of the device.
 	 * @return Device identification.
 	 */
-	virtual string getDeviceId() = 0;
+	virtual std::string getDeviceId() = 0;
 
 	/**
 	 * This method make the device reset its internals variables.

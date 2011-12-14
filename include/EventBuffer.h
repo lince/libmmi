@@ -2,34 +2,29 @@
 #define EVENTBUFFER_H_
 
 #include <vector>
-using namespace std;
 
 #include "MMIEvent.h"
 
-#include <cpputil/Thread.h>
-using namespace cpputil;
-
-#include <cpputil/logger/Logger.h>
-using namespace cpputil::logger;
+#include <libcpputil/Thread.h>
+#include <libcpputil/logger/Logger.h>
 
 namespace br {
 namespace ufscar {
 namespace lince {
 namespace mmi {
 
-	class EventBuffer : public Loggable {
+	class EventBuffer : public cpputil::logger::Loggable {
 		private:
-			vector<MMIEvent*>* buffer;
+			std::vector<MMIEvent*>* buffer;
 			bool waiting;
 			pthread_mutex_t bufferlock;
-			Logger* logger;
 		protected:
 			void lock();
 			void unlock();
 
 		public:
 			EventBuffer();
-			~EventBuffer();
+			virtual ~EventBuffer();
 			void wakeUp();
 			void postEvent(MMIEvent* event);
 			void waitEvent();

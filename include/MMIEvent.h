@@ -8,8 +8,7 @@
 #ifndef MMIEVENT_H_
 #define MMIEVENT_H_
 
-#include <iostream>
-using namespace std;
+#include <string>
 
 namespace br {
 namespace ufscar {
@@ -28,7 +27,7 @@ public:
 	 * @param deviceId Name of the device that generate the event.
 	 * @param eventType Type od the event.
 	 */
-	MMIEvent(string deviceId, string eventType);
+	MMIEvent(std::string deviceId, std::string eventType);
 
 	/**
 	 * Destructor
@@ -39,17 +38,17 @@ public:
 	 * This method returns the id of the device that generate the event.
 	 * @return Device id.
 	 */
-	string getDeviceId();
+	std::string getDeviceId();
 
 	/**
 	 * This method returns the type of event.
 	 * @return Event type.
 	 */
-	string getEventType();
+	std::string getEventType();
 
 protected:
-	string deviceId;
-	string eventType;
+	std::string deviceId;
+	std::string eventType;
 };
 
 }

@@ -9,13 +9,11 @@
 #define EVENTPARSER_H
 
 #include <string>
-using namespace std;
 
 #include <xercesc/dom/DOM.hpp>
 XERCES_CPP_NAMESPACE_USE
 
-#include <cpputil/logger/Logger.h>
-using namespace cpputil::logger;
+#include <libcpputil/logger/Logger.h>
 
 #include "EventFactory.h"
 #include "MMIEvent.h"
@@ -25,7 +23,7 @@ namespace ufscar {
 namespace lince {
 namespace mmi {
 
-class EventParser : public Loggable {
+class EventParser : public cpputil::logger::Loggable {
 public:
 	static EventParser* getInstance();
 
@@ -34,7 +32,7 @@ public:
 private:
 	EventParser();
 
-	~EventParser();
+	virtual ~EventParser();
 
 	EventFactory* getFactoryByType(string type);
 
@@ -42,8 +40,6 @@ private:
 
 private:
 	static EventParser* _instance;
-
-	Logger* logger;
 };
 
 }

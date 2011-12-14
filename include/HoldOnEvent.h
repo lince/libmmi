@@ -8,7 +8,7 @@
 #ifndef HOLDONEVENT_H_
 #define HOLDONEVENT_H_
 
-#include <cpputil/logger/Logger.h>
+#include <libcpputil/logger/Logger.h>
 using namespace cpputil::logger;
 
 #include "MMIEvent.h"
@@ -23,7 +23,7 @@ namespace mmi {
  * This class represent a event for the Hold On mechanism.
  * HoldOn Events are event used to control the Hold On mechanism.
  */
-class HoldOnEvent : public Parsable, public MMIEvent, public Loggable {
+class HoldOnEvent : public Parsable, public MMIEvent, public cpputil::logger::Loggable {
 public:
 	enum HoldOnEventType {NONE, GO_BACK};
 
@@ -32,7 +32,7 @@ public:
 	 * @param deviceId Name of the device that generate the event.
 	 * @param eventType Type od the event.
 	 */
-	HoldOnEvent(string deviceId, HoldOnEventType type);
+	HoldOnEvent(std::string deviceId, HoldOnEventType type);
 
 	/**
 	 * Destructor
@@ -49,13 +49,13 @@ public:
 	 * This method returns the timestamp event type.
 	 * @return a string that contains the timestamp.
 	 */
-	string getTimestamp();
+	std::string getTimestamp();
 
 	/**
 	 * This method allows the setting of the event timestamp..
 	 * @param timeStamp of the event
 	 */
-	void setTimestamp(string timeStamp);
+	void setTimestamp(std::string timeStamp);
 
 
 
@@ -76,12 +76,12 @@ private:
 	 * setting up the current instance with the given information.
 	 * @param jsonString A string that contains the XML Document information
 	 */
-	void parseJson(string jsonString);
+	void parseJson(std::string jsonString);
 
 private:
 
 	HoldOnEventType type;
-	string timestamp;
+	std::string timestamp;
 
 	Logger* logger;
 

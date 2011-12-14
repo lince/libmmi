@@ -1,8 +1,7 @@
 #ifndef TCPDEVICE_H_
 #define TCPDEVICE_H_
 
-#include <cpputil/Thread.h>
-using namespace cpputil;
+#include <libcpputil/Thread.h>
 
 #include "../IDeviceComm.h"
 #include "../MMIManager.h"
@@ -16,21 +15,21 @@ namespace lince {
 namespace mmi {
 namespace socketconn {
 
-class TCPDevice : public IDeviceComm, public Thread {
+class TCPDevice : public IDeviceComm, public cpputil::Thread {
 public:
 	TCPDevice(SocketTCP* socket);
 
 	virtual ~TCPDevice();
 
-	void connect();
+	virtual void connect();
 
-	void disconnect();
+	virtual void disconnect();
 
-	void sendToDevice(vector<string>* args);
+	virtual void sendToDevice(vector<string>* args);
 
-	string getDeviceId();
+	virtual string getDeviceId();
 
-	void release();
+	virtual void release();
 
 	string getDeviceIP();
 
@@ -48,7 +47,6 @@ private:
 
 	MMIManager* manager;
 };
-
 
 }
 }

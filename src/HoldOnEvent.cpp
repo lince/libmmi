@@ -14,7 +14,8 @@ XERCES_CPP_NAMESPACE_USE
 
 #include <libjson/libjson.h>
 
-#include <cpputil/NotImplementedException.h>
+#include <libcpputil/NotImplementedException.h>
+using namespace std;
 
 namespace br{
 namespace ufscar{
@@ -22,28 +23,24 @@ namespace lince{
 namespace mmi {
 
 HoldOnEvent::HoldOnEvent(string deviceId, HoldOnEventType type) :
-		MMIEvent(deviceId, "key"){
+		MMIEvent(deviceId, "key"),
+		cpputil::logger::Loggable("br::ufscar::lince::mmi::HoldOnEvent") {
 
-	logger = Logger::getInstance();
-	logger->registerClass(this, "br::ufscar::lince::mmi::HoldOnEvent");
-
-	TRACE(logger, "Construtor - Padrão");
+	trace("begin Constructor");
 
 	this->type = type;
 	this->timestamp = "";
 }
 
 HoldOnEvent::~HoldOnEvent() {
-	// TODO Auto-generated destructor stub
+	trace("begin Destructor");
 }
 
 HoldOnEvent::HoldOnEvent() :
-	MMIEvent("", "key"), Parsable(){
+			MMIEvent("", "key"), Parsable(),
+			cpputil::logger::Loggable("br::ufscar::lince::mmi::HoldOnEvent") {
 
-	logger = Logger::getInstance();
-	logger->registerClass(this, "br::ufscar::lince::mmi::HoldOnEvent");
-
-	TRACE(logger, "Construtor - Interno XML");
+	trace("begin Constructor");
 	this->type = HoldOnEvent::NONE;
 	this->timestamp = "";
 }
@@ -65,19 +62,22 @@ void HoldOnEvent::setTimestamp(string timeStamp) {
 
 
 void HoldOnEvent::parseXMLData(XMLData* data) {
-	TRACE(logger, "parseXMLData");
+	trace(" begin parseXMLData(XMLData*)");
+	throw cpputil::NotImplementedException(
+			"This functionality has been not implemented yet",
+			"br::ufscar::lince::mmi::KeyEvent"
+			"parseXMLData(XMLData*)");
+
+}
+
+void HoldOnEvent::parseJson(string jsonString) {
+	trace("begin parseJson(string)");
 	throw cpputil::NotImplementedException(
 			"This functionality has been not implemented yet",
 			"br::ufscar::lince::mmi::KeyEvent"
 			"parseJson(string)");
 
-}
-
-
-void HoldOnEvent::parseJson(string jsonString) {
-	TRACE(logger, "parseJson(string)");
-
-	char *json = "{ "
+	/*char *json = "{ "
 			"\"multimodal\" : {"
 			"\"device\" : {"
 			"\"id\" : \"DEADBEEF-DEAF-BABA-FEED-BABE00000006\","
@@ -133,7 +133,7 @@ void HoldOnEvent::parseJson(string jsonString) {
 		json_free(node_name);
 		++i;
 	}
-	json_delete(n);
+	json_delete(n);*/
 }
 
 

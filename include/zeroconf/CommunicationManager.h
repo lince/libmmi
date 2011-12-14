@@ -59,11 +59,9 @@ http://lince.dc.ufscar.br
 #ifndef COMMUNICATIONMANAGER_H
 #define COMMUNICATIONMANAGER_H
 
-#include <cpputil/Thread.h>
-using namespace cpputil;
+#include <libcpputil/Thread.h>
 
-#include <cpputil/logger/Logger.h>
-using namespace cpputil::logger;
+#include <libcpputil/logger/Logger.h>
 
 #include <avahi-client/client.h>
 #include <avahi-client/publish.h>
@@ -86,7 +84,7 @@ namespace zeroconf{
  * Classe responsável pelo recebimento via rede, usando o protocolo ZeroConf,
  * de mensagens XML representando eventos multimodais.
  */
-class CommunicationManager : public Thread, public IDeviceComm, public Loggable {
+class CommunicationManager : public cpputil::Thread, public IDeviceComm, public cpputil::logger::Loggable {
 	
 public:
 	virtual void connect();

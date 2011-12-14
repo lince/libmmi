@@ -3,15 +3,15 @@
 #include "../include/AccelerationFactory.h"
 #include "../include/KeyEventFactory.h"
 
-//#include "cm/IComponentManager.h"
-//using namespace ::br::pucrio::telemidia::ginga::core::cm;
-
 #include <xercesc/dom/DOM.hpp>
 #include <xercesc/parsers/XercesDOMParser.hpp>
 #include <xercesc/framework/LocalFileInputSource.hpp>
 #include <xercesc/framework/MemBufInputSource.hpp>
 #include <xercesc/sax/SAXException.hpp>
 XERCES_CPP_NAMESPACE_USE
+
+#include <sstream>
+using namespace std;
 
 namespace br {
 namespace ufscar {
@@ -20,38 +20,36 @@ namespace mmi {
 
 EventParser* EventParser::_instance = NULL;
 
-EventParser::EventParser() {
-	logger = Logger::getInstance();
+EventParser::EventParser()
+		: cpputil::logger::Loggable("br::ufscar::lince::mmi::EventParser") {
 
-	logger->registerClass(this, (string) "br::ufscar::lince::mmi::EventParser");
-
-	TRACE(logger, "Constructor");
+	trace("begin Constructor");
 
 	XMLPlatformUtils::Initialize();
 }
 
 EventParser::~EventParser() {
-	TRACE(logger, "Destructor");
+	trace("begin Destructor");
 
 	XMLPlatformUtils::Terminate();
 }
 
 MMIEvent* EventParser::ParseXMLEvent(XMLData* data) {
-	TRACE(logger, "ParseXMLEvent(XMLDdata* )");
+	trace("begin parseXMLEvent(XMLDdata* )");
 
 	bool bFailed = false;
 
 	// create new parser instance.
 	XercesDOMParser *parser = new XercesDOMParser();
 	if (!parser) {
-			INFO(logger, "não foi possível criar um parser");
+			info("Couldn't create a parser.");
 			return NULL;
 	} else {
 		try {
 			string aux = data->payload;
 			//checking if source is data->payload or uri
 			if (aux.find("<") != std::string::npos) {
-				DEBUG(logger, "MemBufInputSource");
+				debug("Using MemBufInputSource");
 				MemBufInputSource xmlSource(
 						(XMLByte*)(data->payload),
 						data->length,
@@ -60,7 +58,7 @@ MMIEvent* EventParser::ParseXMLEvent(XMLData* data) {
 				parser->parse(xmlSource);
 
 			} else {
-				DEBUG(logger, "LocalFileInputSource");
+				debug("Using LocalFileInputSource");
 				LocalFileInputSource source(
 						XMLString::transcode(data->payload));
 
@@ -72,28 +70,31 @@ MMIEvent* EventParser::ParseXMLEvent(XMLData* data) {
 				int status, errnum;
 				XMLSSize_t lineError, colError;
 				XMLCh *segundo, *format, *systemId, *publicId;
+				std::stringstream stream;
 
-				cerr << "Parsing " << data->payload <<std::endl;
-				cerr << " error count: ";
-				cerr << parser->getErrorCount() << std::endl;
+				stream << "Parsing " << data->payload <<std::endl;
+				stream << " error count: ";
+				stream << parser->getErrorCount() << std::endl;
 
 				parser->error(status, segundo,
 						(XMLErrorReporter::ErrTypes)errnum,
 						format, systemId, publicId, lineError, colError);
 
-				cerr<<"status: "<<status<<endl;
-				//cerr<<XMLString::transcode(segundo)<<endl;
-				cerr<<errnum<<endl;
-				cerr<<XMLString::transcode(format)<<endl;
-				cerr<<XMLString::transcode(systemId)<<endl;
-				cerr<<XMLString::transcode(publicId)<<endl;
-				cerr<<"line: "<<lineError<<" column:"<<colError<<endl<<endl;
+				stream<<"status: "<<status<<endl;
+				//stream<<XMLString::transcode(segundo)<<endl;
+				stream<<errnum<<endl;
+				stream<<XMLString::transcode(format)<<endl;
+				stream<<XMLString::transcode(systemId)<<endl;
+				stream<<XMLString::transcode(publicId)<<endl;
+				stream<<"line: "<<lineError<<" column:"<<colError;
+				error(stream.str());
 			}
 
 		} catch (const DOMException& e) {
-			cerr << "DOM Exception parsing ";
-			cerr << data->payload;
-			cerr << " reports: ";
+			std::stringstream stream;
+			stream << "DOM Exception parsing ";
+			stream << data->payload;
+			stream << " reports: ";
 
 			// was message provided?
 			if (e.msg) {
@@ -104,29 +105,37 @@ MMIEvent* EventParser::ParseXMLEvent(XMLData* data) {
 
 			} else {
 				// no: just display the error code.
-				cerr << e.code << std::endl;
+				stream << e.code;
 			}
 
 			bFailed = true;
+			error(stream.str());
 
 		} catch (const XMLException& e) {
-			cerr << "data->payload Exception parsing ";
-			cerr << data->payload;
-			cerr << " reports: ";
-			cerr << e.getMessage() << std::endl;
+			std::stringstream stream;
+			stream << "data->payload Exception parsing ";
+			stream << data->payload;
+			stream << " reports: ";
+			stream << e.getMessage();
+			error(stream.str());
 			bFailed = true;
 
 		} catch (const SAXException& e) {
-			cerr << "SAX Exception parsing ";
-			cerr << data->payload;
-			cerr << " reports: ";
-			cerr << e.getMessage() << std::endl;
+			std::stringstream stream;
+			stream << "SAX Exception parsing ";
+			stream << data->payload;
+			stream << " reports: ";
+			stream << e.getMessage();
+			error(stream.str());
 			bFailed = true;
 
 		} catch (...) {
-			cerr << "An exception parsing ";
-			cerr << data->payload << std::endl;
+			std::stringstream stream;
+			stream << "An exception parsing ";
+			stream << data->payload;
+			error(stream.str());
 			bFailed = true;
+
 		}
 
 		// did the input document parse okay?
@@ -135,8 +144,9 @@ MMIEvent* EventParser::ParseXMLEvent(XMLData* data) {
 			DOMElement* elementRoot = pDoc->getDocumentElement();
 
 			if (!elementRoot) {
-				INFO(logger, "empty data->payload document");
-	//			throw(std::runtime_error("empty data->payload document"));
+				warning("empty data->payload document");
+				//TODO: Throw XmlParserException
+				throw(std::runtime_error("empty data->payload document"));
 			}
 
 			data->element = elementRoot;
@@ -148,6 +158,9 @@ MMIEvent* EventParser::ParseXMLEvent(XMLData* data) {
 
 			if (factory != NULL) {
 				return factory->CreateEvent(data);
+			} else {
+				warning("The eventType '" + data->eventType + " doesn't have a EventFactory.");
+				return NULL;
 			}
 		}
 	}
@@ -164,7 +177,7 @@ EventParser* EventParser::getInstance() {
 }
 
 EventFactory* EventParser::getFactoryByType(string type) {
-	TRACE(logger, "getFacotoryByType(string)");
+	trace("begin getFacotoryByType(string)");
 
 	if (type == "acceleration") {
 		return new AccelerationFactory();
@@ -175,7 +188,7 @@ EventFactory* EventParser::getFactoryByType(string type) {
 }
 
 void EventParser::parseHead(XMLData* data) {
-	TRACE(logger, "parseHead(XMLData* )");
+	trace("begin parseHead(XMLData* )");
 
 	DOMElement* e = data->element;
 
@@ -183,7 +196,7 @@ void EventParser::parseHead(XMLData* data) {
 			XMLString::transcode("multimodal"))) {
 
 		const XMLCh* id = e->getAttribute(XMLString::transcode("id"));
-		DEBUG(logger, (string) "eventId: " + XMLString::transcode(id) );
+		debug("eventId: " + XMLString::transcode(id) );
 		data->eventId = XMLString::transcode(id);
 	} else {
 		return;
@@ -202,7 +215,7 @@ void EventParser::parseHead(XMLData* data) {
 			if (XMLString::equals(headElement->getTagName(),
 					XMLString::transcode("head"))) {
 
-				DEBUG(logger, "encontrado elemento head. Iniciando parse.");
+				debug("Element <Head> had been found. Starting Parse.");
 
 				DOMNodeList* childrenHead = headElement->getChildNodes();
 				const XMLSize_t nodeCount = childrenHead->getLength();
@@ -230,7 +243,7 @@ void EventParser::parseHead(XMLData* data) {
 						} else if (XMLString::equals(currentElement->getTagName(),
 								XMLString::transcode("eventType"))) {
 
-							DEBUG(logger, "Encontrou a tag eventType");
+							debug("Attribute eventType had been found");
 
 							const XMLCh* attribute = currentElement->getAttribute(
 									XMLString::transcode("id"));
@@ -238,22 +251,23 @@ void EventParser::parseHead(XMLData* data) {
 							data->eventType = XMLString::transcode(attribute);
 
 						} else {
-							DEBUG(logger, (string) "ERRO! Tag inesperada: " +
+							error("Unexpected Tag: " +
 									XMLString::transcode(currentElement->getTagName()));
+							//TODO: Throw Exception
 						}
 					} else {
-						DEBUG(logger, "Não é elemento");
+						debug("It isn't a element.");
 					}
 				}
 				break;
 			} else {
-				DEBUG(logger, (string) "ERRO! Tag inesperada: " +
+				error("Unexpected Tag: " +
 						XMLString::transcode(headElement->getTagName()));
 				//TODO: throw Exception
 			}
 		}
 	}
-	TRACE(logger, "saindo do parserHead()");
+	trace("end parserHead()");
 }
 
 }

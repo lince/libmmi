@@ -3,8 +3,7 @@
 
 #define DEFAULT_PORT	6004
 
-#include <cpputil/Thread.h>
-using namespace cpputil;
+#include <libcpputil/Thread.h>
 
 #include "ServerSocketTCP.h"
 #include "SocketTCP.h"
@@ -16,10 +15,10 @@ namespace lince {
 namespace mmi {
 namespace socketconn {
 
-class TCPCommServer : public Thread {
+class TCPCommServer : public cpputil::Thread {
 public:
 	TCPCommServer(int portnumber = DEFAULT_PORT);
-	~TCPCommServer();
+	virtual ~TCPCommServer();
 
 	void release();
 

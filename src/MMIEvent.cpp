@@ -12,7 +12,7 @@ namespace ufscar {
 namespace lince {
 namespace mmi {
 
-MMIEvent::MMIEvent(string deviceId, string eventType) {
+MMIEvent::MMIEvent(std::string deviceId, std::string eventType) {
 	this->deviceId = deviceId;
 	this->eventType = eventType;
 }
@@ -21,11 +21,11 @@ MMIEvent::~MMIEvent() {
 
 }
 
-string MMIEvent::getDeviceId() {
+std::string MMIEvent::getDeviceId() {
 	return deviceId;
 }
 
-string MMIEvent::getEventType() {
+std::string MMIEvent::getEventType() {
 	return eventType;
 }
 

@@ -20,6 +20,8 @@ using namespace ::br::ufscar::lince::mmi::wii;
 
 #include "../include/MMIManager.h"
 
+using namespace std;
+
 namespace br {
 namespace ufscar {
 namespace lince {
@@ -27,17 +29,14 @@ namespace mmi {
 
 MMIManager* MMIManager::_instance = NULL;
 
-MMIManager::MMIManager() {
-	intervalTime  = 5;
-	running       = true;
-	notifying     = false;
+MMIManager::MMIManager() : cpputil::logger::Loggable("br::ufscar::lince::mmi::MMIManager") {
+	trace("begin constructor");
 
-	eventBuffer   = new EventBuffer();
+	intervalTime = 5;
+	running = true;
+	notifying = false;
 
-	logger = Logger::getInstance();
-	logger->registerClass(this, "br::ufscar::lince::mmi::MMIManager");
-	TRACE(logger, "Construtor");
-
+	eventBuffer = new EventBuffer();
 	eventListeners = new map<MMIEventListener*, set<string>*>();
 	pthread_mutex_init(&eventListenerMutex, NULL);
 
@@ -62,6 +61,8 @@ MMIManager::MMIManager() {
 }
 
 void MMIManager::connectWiiMote() {
+	trace("begin connectWiiMote()");
+
 	WiiMote* wiiMote = new WiiMote(
 			new WiiEventPoster(),
 			WiiMote::REPORT_ALL);
@@ -74,7 +75,7 @@ void MMIManager::connectWiiMote() {
 }
 
 MMIManager::~MMIManager() {
-	TRACE(logger, "MMIManager::~MMIManager()");
+	trace("begin Destructor()");
 
 	if (_instance != NULL) {
 		delete _instance;
@@ -138,8 +139,7 @@ void MMIManager::release() {
 
 //*Métodos da Interface que será utilizada pelos DeviceComm
 void MMIManager::postEvent(MMIEvent* event) {
-	TRACE(logger, "postEvent("
-			"MMIEvent* event)");
+	trace("begin postEvent(MMIEvent* )");
 
 	if (event != NULL) {
 		eventBuffer->postEvent(event);
@@ -147,16 +147,14 @@ void MMIManager::postEvent(MMIEvent* event) {
 }
 
 void MMIManager::postXMLEvent(XMLData* data) {
-	TRACE(logger, "postXMLEvent("
-				"XMLData* event");
+	trace("postXMLEvent(XMLData* ");
 
 	MMIEvent* event = eventParser->ParseXMLEvent(data);
 	postEvent(event);
 }
 
 void MMIManager::registerDevice(IDeviceComm* device, string deviceId) {
-	TRACE(logger, "registerDevice("
-			"DeviceComm* device, string deviceId)");
+	trace("begin registerDevice(DeviceComm*, string)");
 
 	pthread_mutex_lock(&devicesMutex);
 	map<string, IDeviceComm*>::iterator it;
@@ -174,8 +172,7 @@ void MMIManager::registerDevice(IDeviceComm* device, string deviceId) {
 }
 
 void MMIManager::unregisterDevice(string deviceId) {
-	TRACE(logger, "registerDevice("
-			"unregisterDevice(string deviceId)");
+	trace("begin unregisterDevice(string )");
 
 	pthread_mutex_lock(&devicesMutex);
 	map<string, IDeviceComm*>::iterator it;
@@ -196,9 +193,7 @@ void MMIManager::unregisterDevice(string deviceId) {
 void MMIManager::addEventListener(MMIEventListener* listener,
 		set<string>* eventTypes) {
 
-	TRACE(logger, "addEventListener("
-			"(MMIEventListener* listener, set<string>* eventTypes)");
-
+	trace("addEventListener(MMIEventListener*, set<string>*)");
 	if (!running) {
 		return;
 	}
@@ -242,9 +237,7 @@ void MMIManager::addEventListener(MMIEventListener* listener,
 }
 
 void MMIManager::removeEventListener(MMIEventListener* listener) {
-	TRACE(logger, "removeEventListener("
-			"MMIEventListener* listener)");
-
+	trace("begin removeEventListener(MMIEventListener* )");
 	if (!running) {
 		return;
 	}
@@ -281,6 +274,8 @@ void MMIManager::removeEventListener(MMIEventListener* listener) {
 }
 
 vector<string>* MMIManager::getDevicesName() {
+	trace("begin getDevicesName()");
+
 	vector<string>* names = new vector<string>();
 	map<string, IDeviceComm*>::iterator it;
 	pthread_mutex_lock(&devicesMutex);
@@ -294,6 +289,8 @@ vector<string>* MMIManager::getDevicesName() {
 }
 
 void MMIManager::callDeviceService(string deviceId, vector<string>* args) {
+	trace("begin cllDeviceService(string, vector<string>*");
+
 	map<string, IDeviceComm*>::iterator it;
 	pthread_mutex_lock(&devicesMutex);
 	it = devices->find(deviceId);
@@ -315,7 +312,7 @@ void MMIManager::waitForUnlockCondition() {
 }
 
 void MMIManager::run() {
-	TRACE(logger, "run()");
+	trace("begin run()");
 
 	timeStamp = Functions::getCurrentTimeMillis();
 
@@ -348,8 +345,7 @@ void MMIManager::run() {
 }
 
 bool MMIManager::dispatchEvent(MMIEvent* event) {
-	TRACE(logger, "dispatchEvent("
-			"MMIEvent* event)");
+	trace("begin dispatchEvent(MMIEvent* )");
 
 	map<MMIEventListener*, set<string>*>::iterator i;
 

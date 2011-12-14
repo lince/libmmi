@@ -8,8 +8,7 @@
 #ifndef WIIMOTE_H_
 #define WIIMOTE_H_
 
-#include <cpputil/Thread.h>
-using namespace cpputil;
+#include <libcpputil/Thread.h>
 
 #include <math.h>
 #include <cwiid.h>
@@ -18,7 +17,6 @@ using namespace cpputil;
 #include <stdarg.h>
 #include <stdlib.h>
 #include <iostream>
-using namespace std;
 
 #include "../AccelerationEvent.h"
 #include "../IDeviceComm.h"
@@ -38,7 +36,7 @@ namespace lince{
 namespace mmi {
 namespace wii {
 
-class WiiMote : public Thread, public IDeviceComm {
+class WiiMote : public cpputil::Thread, public IDeviceComm {
 public:
 	static const unsigned char REPORT_BUTTONS;
 	static const unsigned char REPORT_ACCELERATION;
@@ -55,9 +53,9 @@ public:
 
 	virtual void disconnect();
 
-	virtual void sendToDevice(vector<string>* args);
+	virtual void sendToDevice(std::vector<std::string>* args);
 
-	virtual string getDeviceId();
+	virtual std::string getDeviceId();
 
 	virtual void release();
 
@@ -74,10 +72,11 @@ private:
 	WiiButtonReport* buttonReport;
 	WiiDriver *wiiDriver;
 	StateCircularBuffer* buffer;
-	string deviceName;
+	std::string deviceName;
 
     time_t tempoi, tempof;
     double tempoTotal;
+
 protected:
     int evalueMassCenterAccX();
     int evalueMassCenterAccY();

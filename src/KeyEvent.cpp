@@ -12,7 +12,10 @@
 #include <xercesc/sax/SAXException.hpp>
 XERCES_CPP_NAMESPACE_USE
 
-#include <cpputil/NotImplementedException.h>
+#include <libcpputil/NotImplementedException.h>
+using namespace cpputil;
+
+using namespace std;
 
 namespace br{
 namespace ufscar{
@@ -20,31 +23,27 @@ namespace lince{
 namespace mmi {
 
 KeyEvent::KeyEvent(string deviceId, string buttonId) :
-		MMIEvent(deviceId, "key"){
+		MMIEvent(deviceId, "key"),
+		cpputil::logger::Loggable("br::ufscar::lince::mmi::KeyEvent") {
 
-	logger = Logger::getInstance();
-	logger->registerClass(this, "br::ufscar::lince::mmi::KeyEvent");
-
-	TRACE(logger, "Construtor - Padrão");
-
+	trace("begin Constructor");
 	this->keyId = buttonId;
 }
 
 KeyEvent::~KeyEvent() {
+	trace("begin Destructor");
 	// TODO Auto-generated destructor stub
 }
 
 KeyEvent::KeyEvent() :
-	MMIEvent("", "key"), Parsable(){
+			MMIEvent("", "key"), Parsable(),
+			cpputil::logger::Loggable("br::ufscar::lince::mmi::KeyEvent"){
 
-	logger = Logger::getInstance();
-	logger->registerClass(this, "br::ufscar::lince::mmi::KeyEvent");
-
-	TRACE(logger, "Construtor - Interno XML");
+	trace("begin Internal Constructor");
 }
 
 void KeyEvent::parseXMLData(XMLData* data) {
-	TRACE(logger, "parseXMLData");
+	trace("begin parseXMLData(XMLData* )");
 
 	deviceId = data->deviceId;
 
@@ -61,7 +60,7 @@ void KeyEvent::parseXMLData(XMLData* data) {
 				if (XMLString::equals(bodyName->getTagName(),
 						XMLString::transcode("body"))) {
 
-					DEBUG(logger, "encontrado elemento body. Iniciando parse.");
+					debug("Element body had been found.");
 
 					DOMNodeList* bodyChildrens = bodyName->getChildNodes();
 					const XMLSize_t nodeCount = bodyChildrens->getLength();
@@ -83,35 +82,35 @@ void KeyEvent::parseXMLData(XMLData* data) {
 										this->keyId =
 												XMLString::transcode(text->getData());
 
-										INFO(logger, "Valor Encontrado: " + keyId);
+										debug("KeyId: " + keyId);
 										break;
 								} else {
 									//TODO: throw exception
 								}
 
 							} else {
-								INFO(logger, (string) "ERRO! Tag inesperada: " +
+								error((string) "Unexpected tag: " +
 										XMLString::transcode(currentElement->getTagName()));
 										//TODO: throw exception
 							}
 						} else {
-							INFO(logger, "Não é elemento");
+							warning("It isn't a <Element>");
 						}
 					}
 					break;
 				} else {
-					INFO(logger, (string) "ERRO! Tag inesperada: " +
+					error((string) "Unexpected tag:  " +
 							XMLString::transcode(bodyName->getTagName()));
 					//TODO: throw Exception
 				}
 			}
 		}
-		TRACE(logger, "saindo do parserHead()");
+		trace("end parserHead(XMLData* )");
 
 }
 
 void KeyEvent::parseJson(string jsonString) {
-	TRACE(logger, "parseJson(string)");
+	trace("parseJson(string)");
 	throw cpputil::NotImplementedException(
 			"This functionality has been not implemented yet",
 			"br::ufscar::lince::mmi::KeyEvent",

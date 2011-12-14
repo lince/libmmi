@@ -17,13 +17,11 @@
 using namespace std;
 
 
-#include <cpputil/Functions.h>
-#include <cpputil/IllegalParameterException.h>
-#include <cpputil/Thread.h>
-using namespace cpputil;
+#include <libcpputil/Functions.h>
+#include <libcpputil/IllegalParameterException.h>
+#include <libcpputil/Thread.h>
 
-#include <cpputil/logger/Logger.h>
-using namespace cpputil::logger;
+#include <libcpputil/logger/Logger.h>
 
 #include "MMIEvent.h"
 #include "IDeviceComm.h"
@@ -47,7 +45,7 @@ typedef struct {
  * The application must register themselves in the instance of MMIManager to receive the
  * MMIEvents that occurs.
  */
-class MMIManager : public Thread, public Loggable {
+class MMIManager : public cpputil::Thread, public cpputil::logger::Loggable {
 
 public:
 	/**
@@ -91,14 +89,14 @@ public:
 	 * This method allow devices unregister.
 	 * @param deviceId The deviceId that will be unregistred.
 	 */
-	void unregisterDevice(string deviceId);
+	void unregisterDevice(std::string deviceId);
 
 	/**
 	 * This method allow the registration of objects that wish receive multimodal events.
 	 * @param The instance of object that wish receive multimodal events
 	 * @param eventTypes a set of eventTypes that the object wish receive.
 	 */
-	void addEventListener(MMIEventListener* listener, set<string>* eventTypes);
+	void addEventListener(MMIEventListener* listener, std::set<std::string>* eventTypes);
 
 	/**
 	 * This method remove objets of the list of multimodal event listeners.
@@ -110,26 +108,24 @@ public:
 	 * This method returns the id of all devices registred.
 	 * @param A Vector with the id of all devices.
 	 */
-	vector<string>* getDevicesName();
+	std::vector<std::string>* getDevicesName();
 
 	/**
 	 * This method allow applications send message to devices.
 	 * @param deviceId The deviceId that will receive the message.
 	 * @param args A vector with the message that will be send.
 	 */
-	void callDeviceService(string deviceId, vector<string>* args);
+	void callDeviceService(std::string deviceId, std::vector<std::string>* args);
 
 	virtual void waitForUnlockCondition();
 private:
 	static MMIManager* _instance;
 
-	Logger* logger;
+	std::map<MMIEventListener*, std::set<std::string>*>* eventListeners;
 
-	map<MMIEventListener*, set<string>*>* eventListeners;
+	std::map<std::string, IDeviceComm*>* devices;
 
-	map<string, IDeviceComm*>* devices;
-
-	vector<LockedMultimodalAction*>* actionsToMultimodalListeners;
+	std::vector<LockedMultimodalAction*>* actionsToMultimodalListeners;
 
 	pthread_mutex_t eventListenerMutex;
 

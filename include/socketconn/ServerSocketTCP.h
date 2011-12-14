@@ -8,18 +8,12 @@
 #include <unistd.h>
 #include <netinet/in.h>
 #include <iostream>
-using namespace std;
 
-#include <cpputil/Functions.h>
-#include <cpputil/InitializationException.h>
-#include <cpputil/IllegalParameterException.h>
-using namespace cpputil;
-
-#include <cpputil/network/NetworkException.h>
-using namespace cpputil::network;
-
-#include <cpputil/logger/Logger.h>
-using namespace cpputil::logger;
+#include <libcpputil/Functions.h>
+#include <libcpputil/InitializationException.h>
+#include <libcpputil/IllegalParameterException.h>
+#include <libcpputil/network/NetworkException.h>
+#include <libcpputil/logger/Logger.h>
 
 #include "SocketTCP.h"
 
@@ -29,7 +23,7 @@ namespace lince {
 namespace mmi {
 namespace socketconn {
 
-class ServerSocketTCP : public Loggable {
+class ServerSocketTCP : public cpputil::logger::Loggable {
 public:
 	ServerSocketTCP(unsigned short port);
 
@@ -38,7 +32,7 @@ public:
 	void bindPort();
 	void startListen();
 	void startListen(unsigned int max);
-	SocketTCP* acceptConnection();
+	cpputil::network::SocketTCP* acceptConnection();
 	void releasePort();
 
 protected:
@@ -48,7 +42,6 @@ private:
 	int serverSocket;
 	sockaddr_in serverAddress;
 	bool isBinded;
-	Logger* logger;
 
 };
 

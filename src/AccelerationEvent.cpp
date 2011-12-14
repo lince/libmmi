@@ -7,7 +7,8 @@
 
 #include "../include/AccelerationEvent.h"
 
-#include <cpputil/NotImplementedException.h>
+#include <libcpputil/NotImplementedException.h>
+using namespace cpputil::logger;
 
 namespace br{
 namespace ufscar{
@@ -16,27 +17,21 @@ namespace mmi{
 
 
 AccelerationEvent::AccelerationEvent(string deviceId,
-		int xValue, int yValue, int zValue) : MMIEvent(deviceId, "acceleration") {
+		int xValue, int yValue, int zValue) : MMIEvent(deviceId, "acceleration"),
+		Loggable("br::ufscar::lince::mmi::AccelerationEvent") {
 
-	logger = Logger::getInstance();
-	logger->registerClass(this,
-			"br::ufscar::lince::mmi::AccelerationEvent");
-
-	TRACE(logger, "Constructor");
+	trace("begin Constructor");
 
 	this->xValue = xValue;
 	this->yValue = yValue;
 	this->zValue = zValue;
 }
 
-AccelerationEvent::AccelerationEvent() :
-		MMIEvent("", "acceleration"), Parsable() {
+AccelerationEvent::AccelerationEvent() : MMIEvent("", "acceleration"),
+		Parsable(), Loggable("br::ufscar::lince::mmi::AccelerationEvent") {
 
-	logger = Logger::getInstance();
-	logger->registerClass(this,
-			"br::ufscar::lince::mmi::AccelerationEvent");
 
-	TRACE(logger, "Constructor");
+	trace("begin default constructor");
 
 	this->xValue = 0;
 	this->yValue = 0;
@@ -60,7 +55,7 @@ int AccelerationEvent::getZValue() {
 }
 
 void AccelerationEvent::parseXMLData(XMLData* data) {
-	TRACE(logger, "parseJson(string)");
+	trace("begin parseJson(string)");
 	throw cpputil::NotImplementedException(
 			"This functionality has been not implemented yet",
 			"br::ufscar::lince::mmi::AccelerationEvent",
@@ -68,7 +63,7 @@ void AccelerationEvent::parseXMLData(XMLData* data) {
 }
 
 void AccelerationEvent::parseJson(string jsonString) {
-	TRACE(logger, "parseJson(string)");
+	trace("begin parseJson(string)");
 	throw cpputil::NotImplementedException(
 			"This functionality has been not implemented yet",
 			"br::ufscar::lince::mmi::AccelerationEvent",

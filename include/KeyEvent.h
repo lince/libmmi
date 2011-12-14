@@ -8,8 +8,9 @@
 #ifndef KEYEVENT_H_
 #define KEYEVENT_H_
 
-#include <cpputil/logger/Logger.h>
-using namespace cpputil::logger;
+#include <string>
+
+#include <libcpputil/logger/Logger.h>
 
 #include "MMIEvent.h"
 #include "Parsable.h"
@@ -23,7 +24,9 @@ namespace mmi {
  * This class represent a event of type key.
  * Key Events are event generate when the user press a virtual or physical key or button.
  */
-class KeyEvent : public Parsable, public MMIEvent, public Loggable {
+class KeyEvent : public Parsable, public MMIEvent,
+		public cpputil::logger::Loggable {
+
 public:
 
 	/**
@@ -31,7 +34,7 @@ public:
 	 * @param deviceId Name of the device that generate the event.
 	 * @param eventType Type od the event.
 	 */
-	KeyEvent(string deviceId, string buttonId);
+	KeyEvent(std::string deviceId, std::string buttonId);
 
 	/**
 	 * Destructor
@@ -42,7 +45,7 @@ public:
 	 * This method returns the identificator of the key
 	 * @return The key Id.
 	 */
-	string getKeyId();
+	std::string getKeyId();
 
 private:
 	/**
@@ -61,12 +64,11 @@ private:
 	 * setting up the current instance with the given information.
 	 * @param jsonString A string that contains the XML Document information
 	 */
-	virtual void parseJson(string jsonString);
+	virtual void parseJson(std::string jsonString);
 
 private:
-	string keyId;
+	std::string keyId;
 
-	Logger* logger;
 
 friend class KeyEventFactory;
 };
